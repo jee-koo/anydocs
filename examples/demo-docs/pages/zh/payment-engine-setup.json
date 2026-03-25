@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "bb21bd0f": {
-      "id": "bb21bd0f",
+    "b97ce552": {
+      "id": "b97ce552",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "ebf77052",
+          "id": "16535ca2",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "93b5402c": {
-      "id": "93b5402c",
+    "e7798de9": {
+      "id": "e7798de9",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "8a9d8585",
+          "id": "ccc0e76b",
           "type": "heading-two",
           "children": [
             {
@@ -46,12 +46,12 @@
         "depth": 0
       }
     },
-    "c11e5985": {
-      "id": "c11e5985",
+    "e6379bc1": {
+      "id": "e6379bc1",
       "type": "NumberedList",
       "value": [
         {
-          "id": "8733e557",
+          "id": "975ac305",
           "type": "numbered-list",
           "children": [
             {
@@ -69,12 +69,12 @@
         "depth": 0
       }
     },
-    "6f5d666e": {
-      "id": "6f5d666e",
+    "e0216da9": {
+      "id": "e0216da9",
       "type": "NumberedList",
       "value": [
         {
-          "id": "4ff20301",
+          "id": "829ea4b8",
           "type": "numbered-list",
           "children": [
             {
@@ -92,12 +92,12 @@
         "depth": 0
       }
     },
-    "f174a12a": {
-      "id": "f174a12a",
+    "c1d443c5": {
+      "id": "c1d443c5",
       "type": "NumberedList",
       "value": [
         {
-          "id": "6ec69ac7",
+          "id": "e2bcb576",
           "type": "numbered-list",
           "children": [
             {
@@ -115,12 +115,12 @@
         "depth": 0
       }
     },
-    "d71ec2dd": {
-      "id": "d71ec2dd",
+    "5eee00f0": {
+      "id": "5eee00f0",
       "type": "NumberedList",
       "value": [
         {
-          "id": "ef1f4502",
+          "id": "7bc180ff",
           "type": "numbered-list",
           "children": [
             {

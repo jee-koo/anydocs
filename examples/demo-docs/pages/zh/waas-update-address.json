@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "ad81e178": {
-      "id": "ad81e178",
+    "85b2375b": {
+      "id": "85b2375b",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "e7cc9c6b",
+          "id": "6d429205",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "a5852745": {
-      "id": "a5852745",
+    "a69e55c2": {
+      "id": "a69e55c2",
       "type": "Paragraph",
       "value": [
         {
-          "id": "07cd2151",
+          "id": "a255ac21",
           "type": "paragraph",
           "children": [
             {
@@ -47,12 +47,12 @@
         "depth": 0
       }
     },
-    "b8a915bd": {
-      "id": "b8a915bd",
+    "c5374def": {
+      "id": "c5374def",
       "type": "Paragraph",
       "value": [
         {
-          "id": "84e603c7",
+          "id": "99931235",
           "type": "paragraph",
           "children": [
             {
@@ -66,261 +66,373 @@
         "depth": 0
       }
     },
-    "de2fe795": {
-      "id": "de2fe795",
+    "68361f61": {
+      "id": "68361f61",
       "type": "Table",
       "value": [
         {
-          "id": "48251261",
-          "type": "table-row",
+          "id": "d40ada98",
+          "type": "table",
           "children": [
             {
-              "id": "1c5fe78b",
-              "type": "table-data-cell",
+              "id": "f393c651",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "参数"
+                  "id": "7270a7bf",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "参数"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "f61387c3",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "类型"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "668feb90",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "必须"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "79e567af",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "说明"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "51cd8309",
-              "type": "table-data-cell",
+              "id": "19425161",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "类型"
+                  "id": "7036d36c",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "pid"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "aaa11bc4",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "int64"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "616659a3",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "4de5148e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "WaaS 项目 ID"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "95841d30",
-              "type": "table-data-cell",
+              "id": "b7ce4fc6",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "必须"
+                  "id": "4e3890a7",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "address"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "678cd196",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "a2fe9847",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "4c22141c",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "要更新的地址"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "a5a2cd88",
-              "type": "table-data-cell",
+              "id": "457cf52a",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "说明"
+                  "id": "e3545016",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "alias"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "8871c6c6",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "169f40ec",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "否"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "9e083139",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "别名"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "b2bd576e",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "6341898d",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "callback_url"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "ff46c3ba",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "4dae5148",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "否"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "c03718d3",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "回调地址"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "13d866cc",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "ad571bf2",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "status"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "c78badbb",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "df3901f8",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "否"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "4f6d93c6",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "0-启用 1-禁用"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             }
-          ]
-        },
-        {
-          "id": "32919f61",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "8a0fcd2f",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "pid"
-                }
-              ]
-            },
-            {
-              "id": "985ca91e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "int64"
-                }
-              ]
-            },
-            {
-              "id": "7b881da1",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "148a2ca0",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "WaaS 项目 ID"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "aec73a86",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "f0dcefbb",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "address"
-                }
-              ]
-            },
-            {
-              "id": "99fcd7df",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "bb72e7a2",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "9e4a47d2",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "要更新的地址"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "b4b63cdc",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "a20e9d0f",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "alias"
-                }
-              ]
-            },
-            {
-              "id": "8ff78b85",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "5fbf4632",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "否"
-                }
-              ]
-            },
-            {
-              "id": "32efa719",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "别名"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "e2a5dde4",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "b5e92573",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "callback_url"
-                }
-              ]
-            },
-            {
-              "id": "c86996c8",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "cf864b2e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "否"
-                }
-              ]
-            },
-            {
-              "id": "d133cb13",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "回调地址"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "7468c28a",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "d7b03057",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "status"
-                }
-              ]
-            },
-            {
-              "id": "4c093184",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "08c75759",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "否"
-                }
-              ]
-            },
-            {
-              "id": "f8ae3f9e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "0-启用 1-禁用"
-                }
-              ]
-            }
-          ]
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200,
+              200,
+              200
+            ]
+          }
         }
       ],
       "meta": {

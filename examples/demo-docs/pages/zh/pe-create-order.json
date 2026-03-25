@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "cc2c6916": {
-      "id": "cc2c6916",
+    "721a5175": {
+      "id": "721a5175",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "651dabb5",
+          "id": "20cefa05",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "a3946655": {
-      "id": "a3946655",
+    "9b8d92d4": {
+      "id": "9b8d92d4",
       "type": "Paragraph",
       "value": [
         {
-          "id": "ebebfc91",
+          "id": "a6ba0479",
           "type": "paragraph",
           "children": [
             {
@@ -47,387 +47,547 @@
         "depth": 0
       }
     },
-    "21cc9d90": {
-      "id": "21cc9d90",
+    "e8d70f97": {
+      "id": "e8d70f97",
       "type": "Table",
       "value": [
         {
-          "id": "d210d96a",
-          "type": "table-row",
+          "id": "b5b675f8",
+          "type": "table",
           "children": [
             {
-              "id": "e512f453",
-              "type": "table-data-cell",
+              "id": "0887602e",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "参数"
+                  "id": "cfa9ffd3",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "参数"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "8805480c",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "类型"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "d54e75a9",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "必须"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "e380a328",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "说明"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "629e6d04",
-              "type": "table-data-cell",
+              "id": "862691b5",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "类型"
+                  "id": "f45fd314",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "pid"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "979a73ee",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "int64"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "8b0fe83f",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "5fc6b793",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "支付引擎项目 ID"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "1e1d8963",
-              "type": "table-data-cell",
+              "id": "75d6c235",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "必须"
+                  "id": "a2b90f1e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "order_id"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "e4d8c56b",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "c65c5b90",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "f4f2e7cc",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "商户订单编号（唯一，≤128字符）"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "92ef0e0c",
-              "type": "table-data-cell",
+              "id": "c7ef69b8",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "说明"
+                  "id": "1f3d14b1",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "order_amount"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "2af61e5b",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "a7f35839",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "72ed965d",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "订单金额"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e03bf4a2",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "46fa8620",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "order_currency"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "58bab440",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "be53fcbc",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "8685764f",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "货币代码（USD、HKD 等）"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "b1d38cb5",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "40017191",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "tokens"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "3ec30ee3",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "3a3b9746",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "否"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "5af53472",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "指定支付币种，不传则支持所有"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e5175f0c",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "368d5c9e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "valid_time"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "7d0db389",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "int32"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "50486191",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "否"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "ea3e1df6",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "有效时间（10-60 分钟）"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "364c3553",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "369640c4",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "callback_url"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "399de6e9",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "4713916c",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "否"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "706e5660",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "回调地址"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "b2a8dde6",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "9c0a9aeb",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "payer_email"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "41bc0719",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "a3a628a1",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "否"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "76e7f136",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "付款人邮箱"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             }
-          ]
-        },
-        {
-          "id": "3bed168f",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "c593ae0b",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "pid"
-                }
-              ]
-            },
-            {
-              "id": "bf38c060",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "int64"
-                }
-              ]
-            },
-            {
-              "id": "201fd62c",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "1f710d6e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "支付引擎项目 ID"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "6cdeef1f",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "2bb92f33",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "order_id"
-                }
-              ]
-            },
-            {
-              "id": "0309bbaf",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "e924a295",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "e501daaa",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "商户订单编号（唯一，≤128字符）"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "bc1a8a7a",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "7d42c4cf",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "order_amount"
-                }
-              ]
-            },
-            {
-              "id": "d70b777a",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "1396d9fa",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "d24cf4da",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "订单金额"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "7b2bf380",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "a60502a2",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "order_currency"
-                }
-              ]
-            },
-            {
-              "id": "50ea4882",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "c2162f90",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "4a89bb5d",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "货币代码（USD、HKD 等）"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "80a65573",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "a1684fa8",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "tokens"
-                }
-              ]
-            },
-            {
-              "id": "e5ea82d0",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "6c88e63d",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "否"
-                }
-              ]
-            },
-            {
-              "id": "6c5175db",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "指定支付币种，不传则支持所有"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "84d24570",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "63f2fb81",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "valid_time"
-                }
-              ]
-            },
-            {
-              "id": "8bfb776c",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "int32"
-                }
-              ]
-            },
-            {
-              "id": "421c9ce4",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "否"
-                }
-              ]
-            },
-            {
-              "id": "26149d3e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "有效时间（10-60 分钟）"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "64b34726",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "f55d4ec7",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "callback_url"
-                }
-              ]
-            },
-            {
-              "id": "778ceb34",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "d3ecf645",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "否"
-                }
-              ]
-            },
-            {
-              "id": "edc408dc",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "回调地址"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "aa64e1b1",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "f72d087c",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "payer_email"
-                }
-              ]
-            },
-            {
-              "id": "eeb21237",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "41343ad3",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "否"
-                }
-              ]
-            },
-            {
-              "id": "e50c6527",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "付款人邮箱"
-                }
-              ]
-            }
-          ]
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200,
+              200,
+              200
+            ]
+          }
         }
       ],
       "meta": {
@@ -435,12 +595,12 @@
         "depth": 0
       }
     },
-    "f1b275bf": {
-      "id": "f1b275bf",
+    "37b8d3b3": {
+      "id": "37b8d3b3",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "e8f65347",
+          "id": "2511e5dc",
           "type": "heading-two",
           "children": [
             {

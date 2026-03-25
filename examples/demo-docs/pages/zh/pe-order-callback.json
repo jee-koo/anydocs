@@ -8,12 +8,260 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "0a993b92": {
-      "id": "0a993b92",
+    "54553592": {
+      "id": "54553592",
+      "type": "Table",
+      "value": [
+        {
+          "id": "501bb6ac",
+          "type": "table",
+          "children": [
+            {
+              "id": "7fc5f90b",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "7ec6bc67",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "类型"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "01b4b862",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "说明"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "32d6744e",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "14a7ed1d",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "expired"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "953a1020",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "订单超时"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "d8e330d1",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "e2210600",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "paid"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "9714ba5b",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "支付完成"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "a57955c4",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "d4b915f6",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "partial_paid"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "ddda2d0a",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "部分支付"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "891aa443",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "aee1802c",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "overpaid"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "914f4673",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "超额支付"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "d33fb0bf",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "f0c821db",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "refunded"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "0f10e442",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "退款"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "4594d176",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "ddf2812c",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "paid_remain"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "e5897a6b",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "补款"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            }
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200
+            ]
+          }
+        }
+      ],
+      "meta": {
+        "order": 3,
+        "depth": 0
+      }
+    },
+    "fe63ad33": {
+      "id": "fe63ad33",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "f1d0d551",
+          "id": "7c86e6b0",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +275,12 @@
         "depth": 0
       }
     },
-    "a1fd788b": {
-      "id": "a1fd788b",
+    "18918fdb": {
+      "id": "18918fdb",
       "type": "Paragraph",
       "value": [
         {
-          "id": "3a48f68e",
+          "id": "380c9881",
           "type": "paragraph",
           "children": [
             {
@@ -46,12 +294,12 @@
         "depth": 0
       }
     },
-    "3dc70785": {
-      "id": "3dc70785",
+    "ea436519": {
+      "id": "ea436519",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "e4270067",
+          "id": "ca28169d",
           "type": "heading-two",
           "children": [
             {
@@ -65,190 +313,12 @@
         "depth": 0
       }
     },
-    "d0b80fc0": {
-      "id": "d0b80fc0",
-      "type": "Table",
-      "value": [
-        {
-          "id": "0f967596",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "8c141601",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "类型"
-                }
-              ]
-            },
-            {
-              "id": "3038889d",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "说明"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "8356a3b8",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "dcf72b3e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "expired"
-                }
-              ]
-            },
-            {
-              "id": "75c316a0",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "订单超时"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "8a5d67e9",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "120f4196",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "paid"
-                }
-              ]
-            },
-            {
-              "id": "9e898e1b",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "支付完成"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "6c79cfa0",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "329f6f4c",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "partial_paid"
-                }
-              ]
-            },
-            {
-              "id": "841a56a1",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "部分支付"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "d3bf26cd",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "c6b01d2e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "overpaid"
-                }
-              ]
-            },
-            {
-              "id": "b4a87917",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "超额支付"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "4aade6f7",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "378ead21",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "refunded"
-                }
-              ]
-            },
-            {
-              "id": "b57c5af9",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "退款"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "6d250931",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "5b8f5cf7",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "paid_remain"
-                }
-              ]
-            },
-            {
-              "id": "535076e6",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "补款"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "meta": {
-        "order": 3,
-        "depth": 0
-      }
-    },
-    "de8699ae": {
-      "id": "de8699ae",
+    "b92b63de": {
+      "id": "b92b63de",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "061cf6fa",
+          "id": "040e0f2c",
           "type": "heading-two",
           "children": [
             {
@@ -262,12 +332,12 @@
         "depth": 0
       }
     },
-    "0dc6c9e3": {
-      "id": "0dc6c9e3",
+    "379d4638": {
+      "id": "379d4638",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "3fbb2a98",
+          "id": "79fdf6b2",
           "type": "heading-two",
           "children": [
             {

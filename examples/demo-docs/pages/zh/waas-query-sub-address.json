@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "591c11d6": {
-      "id": "591c11d6",
+    "3324521b": {
+      "id": "3324521b",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "d01b794f",
+          "id": "bf9681d9",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "3283d0cc": {
-      "id": "3283d0cc",
+    "80db591e": {
+      "id": "80db591e",
       "type": "Paragraph",
       "value": [
         {
-          "id": "0db19da0",
+          "id": "3d278848",
           "type": "paragraph",
           "children": [
             {
@@ -47,135 +47,199 @@
         "depth": 0
       }
     },
-    "471a96f9": {
-      "id": "471a96f9",
+    "ac8ca0f0": {
+      "id": "ac8ca0f0",
       "type": "Table",
       "value": [
         {
-          "id": "809a370b",
-          "type": "table-row",
+          "id": "b48d8685",
+          "type": "table",
           "children": [
             {
-              "id": "6e96fb8f",
-              "type": "table-data-cell",
+              "id": "783027ed",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "参数"
+                  "id": "c53eef5e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "参数"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "72aeeb6d",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "类型"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "22eabaf5",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "必须"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "9cd8a1ea",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "说明"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "c95af7e4",
-              "type": "table-data-cell",
+              "id": "4e504726",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "类型"
+                  "id": "9c5a1493",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "pid"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "91c708cd",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "int64"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "2cef6d79",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "bc66bfde",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "WaaS 项目 ID"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "ad7e9112",
-              "type": "table-data-cell",
+              "id": "8109bdb2",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "必须"
-                }
-              ]
-            },
-            {
-              "id": "e150ccc9",
-              "type": "table-data-cell",
-              "children": [
+                  "id": "19e60a5a",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "cid"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
                 {
-                  "text": "说明"
+                  "id": "ccaf13aa",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "int64"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "5eeb8124",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "543fe3d5",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Cregis 系统流水号"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             }
-          ]
-        },
-        {
-          "id": "3130622e",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "0418dae9",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "pid"
-                }
-              ]
-            },
-            {
-              "id": "808bbe7c",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "int64"
-                }
-              ]
-            },
-            {
-              "id": "ce70cc03",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "a885b43d",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "WaaS 项目 ID"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "05a462fe",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "8666ac08",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "cid"
-                }
-              ]
-            },
-            {
-              "id": "046cc067",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "int64"
-                }
-              ]
-            },
-            {
-              "id": "182f0f9e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "f95e524e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Cregis 系统流水号"
-                }
-              ]
-            }
-          ]
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200,
+              200,
+              200
+            ]
+          }
         }
       ],
       "meta": {
@@ -183,12 +247,12 @@
         "depth": 0
       }
     },
-    "e37c4bc9": {
-      "id": "e37c4bc9",
+    "42613f8e": {
+      "id": "42613f8e",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "f161ae2f",
+          "id": "21b3bed1",
           "type": "heading-two",
           "children": [
             {

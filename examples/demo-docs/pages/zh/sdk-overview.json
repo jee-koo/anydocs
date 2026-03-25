@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "277abc11": {
-      "id": "277abc11",
+    "53fd10d6": {
+      "id": "53fd10d6",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "7e8ece2f",
+          "id": "a2eee4e1",
           "type": "heading-one",
           "children": [
             {
@@ -27,129 +27,183 @@
         "depth": 0
       }
     },
-    "14e520ab": {
-      "id": "14e520ab",
+    "a68df22d": {
+      "id": "a68df22d",
       "type": "Table",
       "value": [
         {
-          "id": "1de11e44",
-          "type": "table-row",
+          "id": "b90d8cf6",
+          "type": "table",
           "children": [
             {
-              "id": "aa4a8ac5",
-              "type": "table-data-cell",
+              "id": "38ad7260",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "语言"
+                  "id": "0be05cb7",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "语言"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "e457fad8",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "状态"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "3d443cfd",
-              "type": "table-data-cell",
+              "id": "741c08d2",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "状态"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "4a5e7294",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "6bb9f2b3",
-              "type": "table-data-cell",
-              "children": [
+                  "id": "3cb28f12",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Java SDK"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
                 {
-                  "text": "Java SDK"
-                }
-              ]
-            },
-            {
-              "id": "211ea048",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "可用"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "48f8a0d3",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "d1789de1",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Go SDK"
+                  "id": "3f05681f",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "可用"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "26d0eb8e",
-              "type": "table-data-cell",
+              "id": "cedc0709",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "可用"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "ec6373b1",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "4366f0fd",
-              "type": "table-data-cell",
-              "children": [
+                  "id": "3a69aade",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Go SDK"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
                 {
-                  "text": "PHP SDK"
-                }
-              ]
-            },
-            {
-              "id": "1b1dc5d5",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "可用"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "db10ccae",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "0c885e70",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "C# SDK"
+                  "id": "8fd6998d",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "可用"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "520ba523",
-              "type": "table-data-cell",
+              "id": "680ab4f8",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "可用"
+                  "id": "f7edd8f7",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "PHP SDK"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "e6ac7eab",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "可用"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "c8692c53",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "b6135f3d",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "C# SDK"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "7f6a10b4",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "可用"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             }
-          ]
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200
+            ]
+          }
         }
       ],
       "meta": {
@@ -157,12 +211,12 @@
         "depth": 0
       }
     },
-    "e4127ed3": {
-      "id": "e4127ed3",
+    "b876f0e3": {
+      "id": "b876f0e3",
       "type": "Paragraph",
       "value": [
         {
-          "id": "a2caa9d6",
+          "id": "a43f00b2",
           "type": "paragraph",
           "children": [
             {

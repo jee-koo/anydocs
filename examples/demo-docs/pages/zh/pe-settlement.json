@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "abf187ed": {
-      "id": "abf187ed",
+    "efc4fe9d": {
+      "id": "efc4fe9d",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "4037aa10",
+          "id": "a0c69df2",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "95f20e63": {
-      "id": "95f20e63",
+    "37807a21": {
+      "id": "37807a21",
       "type": "Paragraph",
       "value": [
         {
-          "id": "2ad6e4fb",
+          "id": "a8b39a43",
           "type": "paragraph",
           "children": [
             {
@@ -46,12 +46,12 @@
         "depth": 0
       }
     },
-    "46c575f5": {
-      "id": "46c575f5",
+    "05245b79": {
+      "id": "05245b79",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "6caed061",
+          "id": "854a259d",
           "type": "heading-two",
           "children": [
             {
@@ -65,105 +65,151 @@
         "depth": 0
       }
     },
-    "69803d38": {
-      "id": "69803d38",
+    "98eeaf88": {
+      "id": "98eeaf88",
       "type": "Table",
       "value": [
         {
-          "id": "29823ade",
-          "type": "table-row",
+          "id": "e20f3c0e",
+          "type": "table",
           "children": [
             {
-              "id": "7f5a5769",
-              "type": "table-data-cell",
+              "id": "e1ca3764",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "状态"
+                  "id": "ecd24e40",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "状态"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "42a60008",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "说明"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "f9c526c0",
-              "type": "table-data-cell",
+              "id": "d28bd3ca",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "说明"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "999b2b50",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "f3992412",
-              "type": "table-data-cell",
-              "children": [
+                  "id": "c73238af",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "unsettled"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
                 {
-                  "text": "unsettled"
-                }
-              ]
-            },
-            {
-              "id": "d0672f8a",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "尚未结算"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "207df4bb",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "41e4e996",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "settling"
+                  "id": "40a89876",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "尚未结算"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "de74f7a8",
-              "type": "table-data-cell",
+              "id": "839ad192",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "正在结算"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "73a7e378",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "85302b23",
-              "type": "table-data-cell",
-              "children": [
+                  "id": "184aadbd",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "settling"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
                 {
-                  "text": "settled"
+                  "id": "80fcd150",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "正在结算"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "9c7fc0c7",
-              "type": "table-data-cell",
+              "id": "43fb92ec",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "结算完成"
+                  "id": "6c3b0291",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "settled"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "de23357b",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "结算完成"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             }
-          ]
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200
+            ]
+          }
         }
       ],
       "meta": {
@@ -171,12 +217,12 @@
         "depth": 0
       }
     },
-    "52b6af0a": {
-      "id": "52b6af0a",
+    "226d0b3f": {
+      "id": "226d0b3f",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "fbaf7b09",
+          "id": "2a35f7e7",
           "type": "heading-two",
           "children": [
             {
@@ -190,12 +236,12 @@
         "depth": 0
       }
     },
-    "d13c83ba": {
-      "id": "d13c83ba",
+    "b95d5b63": {
+      "id": "b95d5b63",
       "type": "Paragraph",
       "value": [
         {
-          "id": "aefaff3a",
+          "id": "e311fd48",
           "type": "paragraph",
           "children": [
             {

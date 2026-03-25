@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "158bf83f": {
-      "id": "158bf83f",
+    "4b9be4b5": {
+      "id": "4b9be4b5",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "c309bcfb",
+          "id": "07370a04",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "37cc6e68": {
-      "id": "37cc6e68",
+    "789ef2d4": {
+      "id": "789ef2d4",
       "type": "Paragraph",
       "value": [
         {
-          "id": "a8f95097",
+          "id": "252f4169",
           "type": "paragraph",
           "children": [
             {
@@ -46,83 +46,121 @@
         "depth": 0
       }
     },
-    "fdd0d425": {
-      "id": "fdd0d425",
+    "e28f2f92": {
+      "id": "e28f2f92",
       "type": "Table",
       "value": [
         {
-          "id": "c2ba1765",
-          "type": "table-row",
+          "id": "e2fb2373",
+          "type": "table",
           "children": [
             {
-              "id": "79ba76bf",
-              "type": "table-data-cell",
+              "id": "88f3dc12",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "环境"
+                  "id": "90ac494b",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "环境"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "48bc167e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "用途"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "abbe8f8b",
-              "type": "table-data-cell",
+              "id": "eebb5a09",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "用途"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "8bdf1881",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "02402132",
-              "type": "table-data-cell",
-              "children": [
+                  "id": "cc3b0168",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "开发环境",
+                      "bold": true
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
                 {
-                  "text": "开发环境",
-                  "bold": true
-                }
-              ]
-            },
-            {
-              "id": "7f7aadc7",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "功能开发、集成测试和问题调试的沙箱环境"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "69a4f2d1",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "349421f1",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "生产环境",
-                  "bold": true
+                  "id": "6654e97c",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "功能开发、集成测试和问题调试的沙箱环境"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "7dabe757",
-              "type": "table-data-cell",
+              "id": "b91bf097",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "实际业务运营的正式环境"
+                  "id": "8d354530",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "生产环境",
+                      "bold": true
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "58799e59",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "实际业务运营的正式环境"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             }
-          ]
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200
+            ]
+          }
         }
       ],
       "meta": {

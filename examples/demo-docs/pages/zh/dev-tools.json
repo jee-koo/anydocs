@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "ffbf042f": {
-      "id": "ffbf042f",
+    "26717e89": {
+      "id": "26717e89",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "5994d01c",
+          "id": "229fb241",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "a79773cb": {
-      "id": "a79773cb",
+    "d93c9b37": {
+      "id": "d93c9b37",
       "type": "Paragraph",
       "value": [
         {
-          "id": "146b3b45",
+          "id": "e13e3725",
           "type": "paragraph",
           "children": [
             {
@@ -46,129 +46,183 @@
         "depth": 0
       }
     },
-    "f77d2e7d": {
-      "id": "f77d2e7d",
+    "bc6390c6": {
+      "id": "bc6390c6",
       "type": "Table",
       "value": [
         {
-          "id": "f758340a",
-          "type": "table-row",
+          "id": "37e1917c",
+          "type": "table",
           "children": [
             {
-              "id": "6c8317ef",
-              "type": "table-data-cell",
+              "id": "22f676f9",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "网络"
+                  "id": "3d568247",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "网络"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "bda13596",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "领取地址"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "860ce418",
-              "type": "table-data-cell",
+              "id": "8998695c",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "领取地址"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "fb6279a4",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "00753c54",
-              "type": "table-data-cell",
-              "children": [
+                  "id": "59b95ecc",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Ripple (XRP)"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
                 {
-                  "text": "Ripple (XRP)"
-                }
-              ]
-            },
-            {
-              "id": "2cc484d1",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "https://test.bithomp.com/en/faucet"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "d991d563",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "0b5d03c8",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "BNB Smart Chain"
+                  "id": "437c842e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "https://test.bithomp.com/en/faucet"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "e65e58a3",
-              "type": "table-data-cell",
+              "id": "aa003f61",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "https://www.bnbchain.org/en/testnet-faucet"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "23221173",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "9fad1c10",
-              "type": "table-data-cell",
-              "children": [
+                  "id": "bf523557",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "BNB Smart Chain"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
                 {
-                  "text": "TRON (TRX)"
-                }
-              ]
-            },
-            {
-              "id": "c8f4dc08",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "通过 Discord 社区领取"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "9cf9973f",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "ad295c20",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Solana (SOL)"
+                  "id": "49650eb5",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "https://www.bnbchain.org/en/testnet-faucet"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "68fe0b9f",
-              "type": "table-data-cell",
+              "id": "ab9c65f3",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "https://faucet.solana.com"
+                  "id": "92845ac8",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "TRON (TRX)"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "7a1de232",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "通过 Discord 社区领取"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "6437469b",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "fc7c6189",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Solana (SOL)"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "ab855d13",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "https://faucet.solana.com"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             }
-          ]
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200
+            ]
+          }
         }
       ],
       "meta": {

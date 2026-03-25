@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "9d16f7ab": {
-      "id": "9d16f7ab",
+    "95c577f9": {
+      "id": "95c577f9",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "d81085f7",
+          "id": "381bd8c4",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "26d20a85": {
-      "id": "26d20a85",
+    "1887e607": {
+      "id": "1887e607",
       "type": "Paragraph",
       "value": [
         {
-          "id": "bd7e3963",
+          "id": "9dfbd0cb",
           "type": "paragraph",
           "children": [
             {
@@ -46,12 +46,12 @@
         "depth": 0
       }
     },
-    "d426cb56": {
-      "id": "d426cb56",
+    "b9d6ac20": {
+      "id": "b9d6ac20",
       "type": "Blockquote",
       "value": [
         {
-          "id": "2c2ab4ac",
+          "id": "239fd37e",
           "type": "blockquote",
           "children": [
             {
@@ -65,12 +65,12 @@
         "depth": 0
       }
     },
-    "e1056d71": {
-      "id": "e1056d71",
+    "7a5fccb0": {
+      "id": "7a5fccb0",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "bc6935e9",
+          "id": "0e8411f0",
           "type": "heading-two",
           "children": [
             {
@@ -84,12 +84,12 @@
         "depth": 0
       }
     },
-    "ebf8a79c": {
-      "id": "ebf8a79c",
+    "9fd02766": {
+      "id": "9fd02766",
       "type": "Paragraph",
       "value": [
         {
-          "id": "3bc55e97",
+          "id": "07a92762",
           "type": "paragraph",
           "children": [
             {
@@ -103,12 +103,12 @@
         "depth": 0
       }
     },
-    "f3d9d4a9": {
-      "id": "f3d9d4a9",
+    "1b284d9e": {
+      "id": "1b284d9e",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "ed7cc556",
+          "id": "81e8cb88",
           "type": "heading-two",
           "children": [
             {
