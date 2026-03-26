@@ -65,11 +65,12 @@ export function createStudioPageScenario(prefix = 'authentication') {
 
 export function createDeleteScenario(prefix = 'cleanup') {
   const runId = createRunId(prefix);
+  const pageSlug = `cleanup/delete-me-${runId}`;
 
   return {
     runId,
     pageTitle: `Delete Me ${runId}`,
-    pageSlug: `cleanup/delete-me-${runId}`,
+    pageSlug,
     pageId: `delete-me-${runId}`,
   };
 }

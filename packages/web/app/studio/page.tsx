@@ -1,12 +1,20 @@
 import { notFound } from 'next/navigation';
 
-import { LocalStudioApp } from '@/components/studio/local-studio-app';
+import { StudioEntry } from '@/components/studio/studio-entry';
+import { readStudioBootContext } from '@/components/studio/studio-boot';
 import { isDesktopRuntimeEnabled, isExplicitCliDocsRuntimeEnabled } from '@/lib/docs/data';
 
 export default function StudioPage() {
-  if ((process.env.NODE_ENV === 'production' && !isDesktopRuntimeEnabled()) || isExplicitCliDocsRuntimeEnabled()) {
+  const bootContext = readStudioBootContext();
+
+  if (
+    (process.env.NODE_ENV === 'production' &&
+      !isDesktopRuntimeEnabled() &&
+      bootContext.mode !== 'cli-single-project') ||
+    isExplicitCliDocsRuntimeEnabled()
+  ) {
     notFound();
   }
 
-  return <LocalStudioApp />;
+  return <StudioEntry bootContext={bootContext} />;
 }

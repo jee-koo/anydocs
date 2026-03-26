@@ -39,23 +39,18 @@ import {
   registerRecentProject,
   saveProjectsToStorage,
 } from '@/components/studio/project-registry';
+import {
+  createLockedStudioProject,
+  type StudioBootContext,
+} from '@/components/studio/studio-boot';
 import { WelcomeScreen } from '@/components/studio/welcome-screen';
 import {
-  createStudioPage,
-  deleteStudioPage,
-  getStudioApiSources,
-  getStudioNavigation,
-  getStudioPage,
-  getStudioPages,
-  getStudioProject,
-  replaceStudioApiSources,
-  runStudioBuild,
-  runStudioPreview,
-  saveStudioNavigation,
-  saveStudioPage,
+  type DeletePageResponse,
   type StudioBuildResponse,
+  type StudioHost,
   type StudioPreviewResponse,
-  updateStudioProject,
+  type StudioProjectResponse,
+  type StudioProjectSettingsPatch,
 } from '@/components/studio/backend';
 import {
   Select,
@@ -290,8 +285,16 @@ function removePageRefsFromNav(items: NavItem[], pageId: string): { items: NavIt
   return { items: nextItems, removed };
 }
 
-export function LocalStudioApp() {
-  const [projectId, setProjectId] = useState<string>('');
+type LocalStudioAppProps = {
+  bootContext: StudioBootContext;
+  host: StudioHost;
+};
+
+export function LocalStudioApp({ bootContext, host }: LocalStudioAppProps) {
+  const studioHost = host;
+  const lockedProject = useMemo(() => createLockedStudioProject(bootContext), [bootContext]);
+  const isProjectLocked = bootContext.mode === 'cli-single-project';
+  const [projectId, setProjectId] = useState<string>(lockedProject?.id ?? '');
   const [lang, setLang] = useState<DocsLang | null>(null);
   const [load, setLoad] = useState<LoadState>({ nav: null, pages: [], loading: true, error: null });
   const [navDraft, setNavDraft] = useState<NavigationDoc | null>(null);
@@ -327,10 +330,16 @@ export function LocalStudioApp() {
   
   // Folder opening state
   const [isOpeningFolder, setIsOpeningFolder] = useState(false);
-  const [recentProjects, setRecentProjects] = useState<StudioProject[]>([]);
+  const [recentProjects, setRecentProjects] = useState<StudioProject[]>(lockedProject ? [lockedProject] : []);
   
   // Load recent projects and check URL params on mount
   useEffect(() => {
+    if (lockedProject) {
+      setRecentProjects([lockedProject]);
+      setProjectId(lockedProject.id);
+      return;
+    }
+
     const projects = loadProjectsFromStorage();
     setRecentProjects(projects);
     
@@ -343,7 +352,7 @@ export function LocalStudioApp() {
         setProjectId(project.id);
       }
     }
-  }, []);
+  }, [lockedProject]);
   
   // Connection status (simulated as always connected for local)
   const isConnected = !load.error && !load.loading;
@@ -395,6 +404,10 @@ export function LocalStudioApp() {
   }, [workflowMenuOpen]);
 
   const handleOpenFolder = useCallback(async (projectPathOverride?: string) => {
+    if (!bootContext.canOpenExternalProject) {
+      return;
+    }
+
     setIsOpeningFolder(true);
     try {
       const projectPath = projectPathOverride
@@ -405,7 +418,9 @@ export function LocalStudioApp() {
       }
 
       const { current, projects } = registerRecentProject(recentProjects, projectPath);
-      saveProjectsToStorage(projects);
+      if (bootContext.canManageRecentProjects) {
+        saveProjectsToStorage(projects);
+      }
       setRecentProjects(projects);
       setProjectId(current.id);
     } catch (e) {
@@ -415,24 +430,34 @@ export function LocalStudioApp() {
     } finally {
       setIsOpeningFolder(false);
     }
-  }, [recentProjects]);
+  }, [bootContext.canManageRecentProjects, bootContext.canOpenExternalProject, recentProjects]);
 
   const handleProjectSelect = useCallback((project: StudioProject) => {
+    if (!bootContext.canSwitchProjects) {
+      return;
+    }
+
     const updated = recentProjects.map(p => 
       p.id === project.id 
         ? { ...p, lastOpened: Date.now() }
         : p
     ).sort((a, b) => b.lastOpened - a.lastOpened);
-    saveProjectsToStorage(updated);
+    if (bootContext.canManageRecentProjects) {
+      saveProjectsToStorage(updated);
+    }
     setRecentProjects(updated);
     setProjectId(project.id);
-  }, [recentProjects]);
+  }, [bootContext.canManageRecentProjects, bootContext.canSwitchProjects, recentProjects]);
 
   const handleRecentProjectRemove = useCallback((project: StudioProject) => {
+    if (!bootContext.canManageRecentProjects) {
+      return;
+    }
+
     const nextProjects = removeRecentProject(recentProjects, project.id);
     saveProjectsToStorage(nextProjects);
     setRecentProjects(nextProjects);
-  }, [recentProjects]);
+  }, [bootContext.canManageRecentProjects, recentProjects]);
 
   const activeIdRef = useRef<string | null>(null);
   activeIdRef.current = activeId;
@@ -462,14 +487,14 @@ export function LocalStudioApp() {
 
       for (let attempt = 0; ; attempt += 1) {
         try {
-          project = await getStudioProject(projectId, selectedProject.path);
+          project = await studioHost.getProject(projectId, selectedProject.path);
           const nextLang = lang && project.config.languages.includes(lang)
             ? lang
             : project.config.defaultLanguage;
           [nav, pages, apiSources] = await Promise.all([
-            getStudioNavigation(nextLang, projectId, selectedProject.path),
-            getStudioPages(nextLang, projectId, selectedProject.path),
-            getStudioApiSources(projectId, selectedProject.path),
+            studioHost.getNavigation(nextLang, projectId, selectedProject.path),
+            studioHost.getPages(nextLang, projectId, selectedProject.path),
+            studioHost.getApiSources(projectId, selectedProject.path),
           ]);
 
           if (lang !== nextLang) {
@@ -536,7 +561,7 @@ export function LocalStudioApp() {
       setRightSidebarMode(null);
       setLoad({ nav: null, pages: [], loading: false, error: msg });
     }
-  }, [lang, projectId, selectedProject]);
+  }, [lang, projectId, selectedProject, studioHost]);
 
   // When projectId changes, reset activeId
   useEffect(() => {
@@ -545,6 +570,10 @@ export function LocalStudioApp() {
   }, [projectId]);
 
   useEffect(() => {
+    if (isProjectLocked) {
+      return;
+    }
+
     const url = new URL(window.location.href);
     if (projectId) {
       url.searchParams.set('p', projectId);
@@ -552,7 +581,7 @@ export function LocalStudioApp() {
       url.searchParams.delete('p');
     }
     window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
-  }, [projectId]);
+  }, [isProjectLocked, projectId]);
 
   // When lang changes, reset activeId to force reload with new language
   useEffect(() => {
@@ -583,7 +612,7 @@ export function LocalStudioApp() {
       setActiveLoading(false);
       return;
     }
-    getStudioPage(lang, activeId, projectId, selectedProject.path)
+    studioHost.getPage(lang, activeId, projectId, selectedProject.path)
       .then((p) => {
         if (cancelled) return;
         setActive(p);
@@ -598,7 +627,7 @@ export function LocalStudioApp() {
     return () => {
       cancelled = true;
     };
-  }, [lang, activeId, projectId, selectedProject]);
+  }, [lang, activeId, projectId, selectedProject, studioHost]);
 
   const title = active?.title ?? '未选择文档';
   const status = active?.status ?? 'draft';
@@ -640,7 +669,7 @@ export function LocalStudioApp() {
         return;
       }
       try {
-        const saved = await saveStudioPage(lang, next, projectId, selectedProject.path);
+        const saved = await studioHost.savePage(lang, next, projectId, selectedProject.path);
         setActive(saved);
         setLoad((current) => ({
           ...current,
@@ -654,7 +683,7 @@ export function LocalStudioApp() {
         setSaving(false);
       }
     },
-    [lang, projectId, selectedProject],
+    [lang, projectId, selectedProject, studioHost],
   );
 
   const onSaveNav = useCallback(async () => {
@@ -672,7 +701,7 @@ export function LocalStudioApp() {
       return;
     }
     try {
-      const saved = await saveStudioNavigation(lang, navDraft, projectId, selectedProject.path);
+      const saved = await studioHost.saveNavigation(lang, navDraft, projectId, selectedProject.path);
       setLoad((current) => ({
         ...current,
         nav: saved,
@@ -685,7 +714,7 @@ export function LocalStudioApp() {
     } finally {
       setSavingNav(false);
     }
-  }, [lang, navDraft, validation.errors, projectId, selectedProject]);
+  }, [lang, navDraft, validation.errors, projectId, selectedProject, studioHost]);
 
   const onSaveProject = useCallback(async () => {
     if (!projectState) return;
@@ -697,53 +726,50 @@ export function LocalStudioApp() {
       return;
     }
     try {
-      const response = await updateStudioProject(
-        {
-          name: projectState.name,
-          languages: projectState.languages,
-          defaultLanguage: projectState.defaultLanguage,
-          site: {
-            theme: {
-              id: projectState.themeId,
-              branding: {
-                ...(projectState.siteTitle.trim() ? { siteTitle: projectState.siteTitle.trim() } : {}),
-                ...(projectState.homeLabel.trim() ? { homeLabel: projectState.homeLabel.trim() } : {}),
-                ...(projectState.logoSrc.trim() ? { logoSrc: projectState.logoSrc.trim() } : {}),
-                ...(projectState.logoAlt.trim() ? { logoAlt: projectState.logoAlt.trim() } : {}),
-              },
-              chrome: projectState.showSearch ? {} : { showSearch: false },
-              colors: {
-                ...(projectState.primaryColor.trim() ? { primary: projectState.primaryColor.trim() } : {}),
-                ...(projectState.primaryForegroundColor.trim()
-                  ? { primaryForeground: projectState.primaryForegroundColor.trim() }
-                  : {}),
-                ...(projectState.accentColor.trim() ? { accent: projectState.accentColor.trim() } : {}),
-                ...(projectState.accentForegroundColor.trim()
-                  ? { accentForeground: projectState.accentForegroundColor.trim() }
-                  : {}),
-                ...(projectState.sidebarActiveColor.trim()
-                  ? { sidebarActive: projectState.sidebarActiveColor.trim() }
-                  : {}),
-                ...(projectState.sidebarActiveForegroundColor.trim()
-                  ? { sidebarActiveForeground: projectState.sidebarActiveForegroundColor.trim() }
-                  : {}),
-              },
-              codeTheme: projectState.codeTheme,
+      const patch: StudioProjectSettingsPatch = {
+        name: projectState.name,
+        languages: projectState.languages,
+        defaultLanguage: projectState.defaultLanguage,
+        site: {
+          theme: {
+            id: projectState.themeId,
+            branding: {
+              ...(projectState.siteTitle.trim() ? { siteTitle: projectState.siteTitle.trim() } : {}),
+              ...(projectState.homeLabel.trim() ? { homeLabel: projectState.homeLabel.trim() } : {}),
+              ...(projectState.logoSrc.trim() ? { logoSrc: projectState.logoSrc.trim() } : {}),
+              ...(projectState.logoAlt.trim() ? { logoAlt: projectState.logoAlt.trim() } : {}),
             },
-            navigation: {
-              topNav: projectState.topNavItems,
+            chrome: projectState.showSearch ? {} : { showSearch: false },
+            colors: {
+              ...(projectState.primaryColor.trim() ? { primary: projectState.primaryColor.trim() } : {}),
+              ...(projectState.primaryForegroundColor.trim()
+                ? { primaryForeground: projectState.primaryForegroundColor.trim() }
+                : {}),
+              ...(projectState.accentColor.trim() ? { accent: projectState.accentColor.trim() } : {}),
+              ...(projectState.accentForegroundColor.trim()
+                ? { accentForeground: projectState.accentForegroundColor.trim() }
+                : {}),
+              ...(projectState.sidebarActiveColor.trim()
+                ? { sidebarActive: projectState.sidebarActiveColor.trim() }
+                : {}),
+              ...(projectState.sidebarActiveForegroundColor.trim()
+                ? { sidebarActiveForeground: projectState.sidebarActiveForegroundColor.trim() }
+                : {}),
             },
+            codeTheme: projectState.codeTheme,
           },
-          build: projectState.outputDir.trim()
-            ? {
-                outputDir: projectState.outputDir.trim(),
-              }
-            : {},
+          navigation: {
+            topNav: projectState.topNavItems,
+          },
         },
-        projectId,
-        selectedProject.path,
-      );
-      const apiSourcesResponse = await replaceStudioApiSources(
+        build: projectState.outputDir.trim()
+          ? {
+              outputDir: projectState.outputDir.trim(),
+            }
+          : {},
+      };
+      const response: StudioProjectResponse = await studioHost.updateProject(patch, projectId, selectedProject.path);
+      const apiSourcesResponse = await studioHost.replaceApiSources(
         sanitizeApiSourcesForSave(projectState.apiSources),
         projectId,
         selectedProject.path,
@@ -785,7 +811,7 @@ export function LocalStudioApp() {
     } finally {
       setProjectSaving(false);
     }
-  }, [lang, projectId, projectState, reload, selectedProject]);
+  }, [lang, projectId, projectState, reload, selectedProject, studioHost]);
 
   useEffect(() => {
     if (!navDirty) return;
@@ -916,7 +942,7 @@ export function LocalStudioApp() {
         throw new Error('请重新打开外部项目根目录。');
       }
 
-      const created = await createStudioPage(
+      const created = await studioHost.createPage(
         lang,
         { slug: values.slug, title: values.title || 'Untitled' },
         projectId,
@@ -934,7 +960,7 @@ export function LocalStudioApp() {
       setNavDirty(true);
       setNavDirtyTick((tick) => tick + 1);
     },
-    [lang, navDraft, projectId, selectedProject, sidebarCreateDialog],
+    [lang, navDraft, projectId, selectedProject, sidebarCreateDialog, studioHost],
   );
 
   const createPageForNavigation = useCallback(
@@ -943,7 +969,7 @@ export function LocalStudioApp() {
         return null;
       }
 
-      const created = await createStudioPage(
+      const created = await studioHost.createPage(
         lang,
         { slug: input.slug.trim(), title: input.title.trim() },
         projectId,
@@ -958,7 +984,7 @@ export function LocalStudioApp() {
 
       return created;
     },
-    [lang, projectId, selectedProject],
+    [lang, projectId, selectedProject, studioHost],
   );
 
   const openPageSettings = useCallback((pageId: string) => {
@@ -980,28 +1006,42 @@ export function LocalStudioApp() {
       setWorkflowError('请重新打开外部项目根目录。');
       return;
     }
+
+    const existingPreviewWindow = previewWindowRef.current;
+    const shouldOpenPreviewWindow = !existingPreviewWindow || existingPreviewWindow.closed;
+    const reservedPreviewWindow = shouldOpenPreviewWindow ? window.open('about:blank', '_blank') : existingPreviewWindow;
+    if (reservedPreviewWindow) {
+      previewWindowRef.current = reservedPreviewWindow;
+    }
+
     setWorkflowBusy('preview');
     setWorkflowMessage(null);
     setWorkflowError(null);
     try {
-      const result: StudioPreviewResponse = await runStudioPreview(projectId, selectedProject.path);
-      setWorkflowMessage(`Preview ready: ${result.docsPath}`);
+      const result: StudioPreviewResponse = await studioHost.runPreview(projectId, selectedProject.path);
       const targetUrl = new URL(result.previewUrl ?? result.docsPath, window.location.href).toString();
-      const existingPreviewWindow = previewWindowRef.current;
+      setWorkflowMessage(`Preview ready: ${targetUrl}`);
+      const nextPreviewWindow = previewWindowRef.current;
 
-      if (existingPreviewWindow && !existingPreviewWindow.closed) {
-        existingPreviewWindow.location.href = targetUrl;
-        existingPreviewWindow.focus();
+      if (nextPreviewWindow && !nextPreviewWindow.closed) {
+        nextPreviewWindow.location.href = targetUrl;
+        nextPreviewWindow.focus();
       } else {
-        previewWindowRef.current = window.open(targetUrl, '_blank', 'noopener,noreferrer');
+        previewWindowRef.current = window.open(targetUrl, '_blank');
       }
     } catch (e: unknown) {
+      if (shouldOpenPreviewWindow && reservedPreviewWindow && !reservedPreviewWindow.closed) {
+        reservedPreviewWindow.close();
+        if (previewWindowRef.current === reservedPreviewWindow) {
+          previewWindowRef.current = null;
+        }
+      }
       setWorkflowMessage(null);
       setWorkflowError(e instanceof Error ? e.message : 'Preview workflow failed');
     } finally {
       setWorkflowBusy(null);
     }
-  }, [projectId, selectedProject]);
+  }, [projectId, selectedProject, studioHost]);
 
   const onDeletePage = useCallback(async () => {
     if (!lang || !active || !selectedProject?.path) {
@@ -1019,7 +1059,7 @@ export function LocalStudioApp() {
     }
 
     try {
-      const deleted = await deleteStudioPage(lang, active.id, projectId, selectedProject.path);
+      const deleted: DeletePageResponse = await studioHost.deletePage(lang, active.id, projectId, selectedProject.path);
 
       const nextPages = sortPagesBySlug(load.pages.filter((page) => page.id !== deleted.pageId));
       const nextActive = nextPages[0] ?? null;
@@ -1049,7 +1089,7 @@ export function LocalStudioApp() {
     } catch (e: unknown) {
       setSaveError(e instanceof Error ? e.message : '页面删除失败');
     }
-  }, [active, lang, load.pages, navDraft, projectId, selectedProject]);
+  }, [active, lang, load.pages, navDraft, projectId, selectedProject, studioHost]);
 
   const runBuild = useCallback(async () => {
     if (!selectedProject?.path) {
@@ -1061,7 +1101,7 @@ export function LocalStudioApp() {
     setWorkflowMessage(null);
     setWorkflowError(null);
     try {
-      const result: StudioBuildResponse = await runStudioBuild(projectId, selectedProject.path);
+      const result: StudioBuildResponse = await studioHost.runBuild(projectId, selectedProject.path);
       const summary = result.languages.map((entry) => `${entry.lang}:${entry.publishedPages}`).join(', ');
       setWorkflowMessage(`Build validated -> ${result.artifactRoot} (${summary})`);
     } catch (e: unknown) {
@@ -1070,7 +1110,7 @@ export function LocalStudioApp() {
     } finally {
       setWorkflowBusy(null);
     }
-  }, [projectId, selectedProject]);
+  }, [projectId, selectedProject, studioHost]);
 
   const triggerWorkflowAction = useCallback(
     async (action: WorkflowAction) => {
@@ -1104,6 +1144,8 @@ export function LocalStudioApp() {
         recentProjects={recentProjects}
         isOpeningFolder={isOpeningFolder}
         supportsNativeDirectoryPicker={hasNativeDirectoryPicker()}
+        allowExternalProjectOpen={bootContext.canOpenExternalProject}
+        allowRecentProjects={bootContext.canManageRecentProjects}
         onOpenProject={(projectPath) => handleOpenFolder(projectPath)}
         onSelectProject={handleProjectSelect}
         onRemoveProject={handleRecentProjectRemove}
@@ -1112,7 +1154,7 @@ export function LocalStudioApp() {
   }
 
   return (
-    <div className="min-h-dvh bg-fd-background text-fd-foreground flex flex-col">
+    <div className="h-dvh overflow-hidden bg-fd-background text-fd-foreground flex flex-col">
       {/* Top Navigation Bar */}
       <header className="flex h-12 items-center justify-between border-b border-fd-border px-4 shrink-0">
         <div className="flex items-center gap-4 flex-1 min-w-0">
@@ -1120,16 +1162,18 @@ export function LocalStudioApp() {
             <span className="text-sm font-semibold truncate">{projectState?.name || selectedProject?.name || 'No Project'}</span>
             <span className="text-xs text-fd-muted-foreground truncate">{projectState?.projectRoot || selectedProject?.path || ''}</span>
           </div>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="h-8 w-8 shrink-0"
-            onClick={() => setProjectId('')}
-            title="Close Project"
-            data-testid="studio-close-project-button"
-          >
-            <X className="size-4" />
-          </Button>
+          {isProjectLocked ? null : (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-8 w-8 shrink-0"
+              onClick={() => setProjectId('')}
+              title="Close Project"
+              data-testid="studio-close-project-button"
+            >
+              <X className="size-4" />
+            </Button>
+          )}
         </div>
 
         <div className="flex items-center gap-2.5">
@@ -1230,10 +1274,10 @@ export function LocalStudioApp() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 flex overflow-hidden">
+      <main className="flex min-h-0 flex-1 overflow-hidden">
         {/* Left Column: File Tree */}
         {leftSidebarOpen && (
-          <aside className="w-64 border-r border-fd-border bg-fd-card flex flex-col shrink-0" data-testid="studio-pages-sidebar">
+          <aside className="flex min-h-0 w-64 shrink-0 flex-col border-r border-fd-border bg-fd-card" data-testid="studio-pages-sidebar">
             <div className="h-10 flex items-center justify-between border-b border-fd-border px-4 shrink-0">
               <span className="text-xs font-semibold tracking-wider text-fd-muted-foreground">PAGES</span>
               <div className="relative">
@@ -1275,7 +1319,7 @@ export function LocalStudioApp() {
                 )}
               </div>
             </div>
-            <div className="flex-1 overflow-y-auto p-2">
+            <div className="min-h-0 flex-1 overflow-y-auto p-2">
               {load.loading ? (
                 <div className="flex items-center gap-2 px-2 py-3 text-sm text-fd-muted-foreground">
                   <Loader2 className="size-4 animate-spin" />
@@ -1320,7 +1364,7 @@ export function LocalStudioApp() {
                 <div className="px-2 py-3 text-sm text-fd-muted-foreground">暂无数据</div>
               )}
             </div>
-            <div className="border-t border-fd-border p-4 shrink-0">
+            <div className="sticky bottom-0 z-10 shrink-0 border-t border-fd-border bg-fd-card/95 p-4 shadow-[0_-10px_24px_rgba(15,23,42,0.06)] backdrop-blur supports-[backdrop-filter]:bg-fd-card/90">
               <Select value={lang ?? ''} onValueChange={(v) => setLang(v as DocsLang)}>
                 <SelectTrigger
                   className="h-11 w-full rounded-xl px-3 text-sm"
@@ -1345,7 +1389,7 @@ export function LocalStudioApp() {
         )}
 
         {/* Middle Column: Editor */}
-        <section className="flex-1 flex flex-col bg-fd-background relative overflow-hidden min-w-0">
+        <section className="relative flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden bg-fd-background">
           {/* Breadcrumbs */}
           <div className="h-10 border-b border-fd-border flex items-center px-6 gap-2 shrink-0">
             <span className="text-xs text-fd-muted-foreground flex items-center gap-1">
@@ -1363,9 +1407,9 @@ export function LocalStudioApp() {
           </div>
 
           {/* Editor Area */}
-          <div className="flex-1 overflow-hidden">
-            <div className="h-full p-6 lg:p-8 xl:p-12">
-              <div className="h-full overflow-hidden">
+          <div className="min-h-0 flex-1 overflow-hidden">
+            <div className="h-full overflow-auto p-6 lg:p-8 xl:p-12">
+              <div className="min-h-full">
                 {workflowError ? (
                   <div
                     className="mb-4 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700"
@@ -1430,7 +1474,7 @@ export function LocalStudioApp() {
 
         {/* Right Column: Contextual Settings */}
         {rightSidebarMode ? (
-          <aside className="w-80 border-l border-fd-border bg-fd-card shrink-0 flex flex-col" data-testid="studio-settings-sidebar">
+          <aside className="flex min-h-0 w-80 shrink-0 flex-col border-l border-fd-border bg-fd-card" data-testid="studio-settings-sidebar">
             <div className="flex h-10 items-center justify-between border-b border-fd-border px-4 shrink-0">
               <div className="text-xs font-semibold tracking-wider text-fd-muted-foreground">
                 {rightSidebarMode === 'project' ? 'PROJECT SETTINGS' : 'PAGE SETTINGS'}
@@ -1507,7 +1551,7 @@ export function LocalStudioApp() {
       />
 
       {/* Footer Status Bar */}
-      <footer className="h-8 border-t border-fd-border bg-fd-card px-4 flex items-center justify-between text-[10px] font-medium text-fd-muted-foreground shrink-0">
+      <footer className="sticky bottom-0 z-20 flex h-8 shrink-0 items-center justify-between border-t border-fd-border bg-fd-card/95 px-4 text-[10px] font-medium text-fd-muted-foreground shadow-[0_-12px_28px_rgba(15,23,42,0.08)] backdrop-blur supports-[backdrop-filter]:bg-fd-card/90">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-1" data-testid="studio-connection-status">
             {isConnected ? (

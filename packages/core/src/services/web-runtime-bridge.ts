@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { ValidationError } from '../errors/validation-error.ts';
 import type { ProjectPathContract } from '../types/project.ts';
 
-const CORE_PACKAGE_ROOT = path.dirname(fileURLToPath(new URL('../index.ts', import.meta.url)));
+const CORE_PACKAGE_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 let webRuntimeQueue: Promise<void> = Promise.resolve();
 const WEB_RUNTIME_LOCK_DIR = '.anydocs-web-runtime.lock';
 const WEB_RUNTIME_LOCK_TIMEOUT_MS = 5 * 60_000;

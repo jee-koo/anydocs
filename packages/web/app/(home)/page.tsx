@@ -1,9 +1,12 @@
 import { notFound, redirect } from 'next/navigation';
 
-import { LocalStudioApp } from '@/components/studio/local-studio-app';
+import { StudioEntry } from '@/components/studio/studio-entry';
+import { readStudioBootContext } from '@/components/studio/studio-boot';
 import { getDefaultPublishedLanguage, isDesktopRuntimeEnabled, isExplicitCliDocsRuntimeEnabled } from '@/lib/docs/data';
 
 export default async function Page() {
+  const bootContext = readStudioBootContext();
+
   if (isExplicitCliDocsRuntimeEnabled()) {
     const defaultLanguage = await getDefaultPublishedLanguage();
     redirect(`/${defaultLanguage}`);
@@ -12,5 +15,5 @@ export default async function Page() {
   if (process.env.NODE_ENV === 'production' && !isDesktopRuntimeEnabled()) {
     notFound();
   }
-  return <LocalStudioApp />;
+  return <StudioEntry bootContext={bootContext} />;
 }

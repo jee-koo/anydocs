@@ -94,6 +94,28 @@ async function snapshotTsconfig() {
   return readFile(tsconfigPath, 'utf8');
 }
 
+function normalizeGeneratedTypeIncludes(include = [], distDir) {
+  const baseIncludes = include.filter(
+    (entry) => typeof entry === 'string' && !/^\.next($|[-/])/.test(entry),
+  );
+
+  return [
+    ...baseIncludes,
+    `${distDir}/types/**/*.ts`,
+    `${distDir}/dev/types/**/*.ts`,
+  ];
+}
+
+async function prepareTsconfigForDist(originalContent, distDir) {
+  const parsed = JSON.parse(originalContent);
+  const nextConfig = {
+    ...parsed,
+    include: normalizeGeneratedTypeIncludes(Array.isArray(parsed.include) ? parsed.include : [], distDir),
+  };
+
+  await writeFile(tsconfigPath, `${JSON.stringify(nextConfig, null, 2)}\n`, 'utf8');
+}
+
 async function restoreTsconfig(originalContent) {
   const currentContent = await readFile(tsconfigPath, 'utf8').catch(() => null);
   if (currentContent !== null && currentContent !== originalContent) {
@@ -188,6 +210,8 @@ async function exportDocsSite(mode) {
   }
 
   try {
+    await prepareTsconfigForDist(originalTsconfig, distDir);
+
     await runNext(['build', '--webpack'], {
       env: createRuntimeEnv(mode, {
         ANYDOCS_NEXT_DIST_DIR: distDir,
@@ -218,6 +242,7 @@ async function runPreviewProxy() {
   const args = process.argv.slice(3);
   const distDir = '.next-cli-preview';
   const originalTsconfig = await snapshotTsconfig();
+  await prepareTsconfigForDist(originalTsconfig, distDir);
   await rm(path.join(webRoot, distDir), { recursive: true, force: true });
   let shuttingDown = false;
   const child = spawn(process.execPath, [nextBin, 'dev', ...args], {

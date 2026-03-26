@@ -117,7 +117,7 @@ test('cli prints general help and exits successfully when no command is provided
   assert.equal(result.exitCode, 0);
   assert.equal(result.signal, null);
   assert.match(spawned.getStdout(), /Usage:/);
-  assert.match(spawned.getStdout(), /pnpm --filter @anydocs\/cli cli <command> \[options\]/);
+  assert.match(spawned.getStdout(), /anydocs <command> \[options\]/);
   assert.equal(spawned.getStderr(), '');
 });
 
@@ -135,7 +135,7 @@ test('cli prints command-specific help and version', async () => {
 
   assert.equal(versionResult.exitCode, 0);
   assert.equal(versionResult.signal, null);
-  assert.equal(versionSpawned.getStdout().trim(), '1.0.0');
+  assert.equal(versionSpawned.getStdout().trim(), '1.0.2');
   assert.equal(versionSpawned.getStderr(), '');
 });
 
@@ -149,7 +149,7 @@ test('version supports structured json output', async () => {
   assert.deepEqual(JSON.parse(spawned.getStdout()), {
     ok: true,
     data: {
-      version: '1.0.0',
+      version: '1.0.2',
     },
     meta: {
       command: 'version',
@@ -164,7 +164,7 @@ test('cli rejects unknown commands with a clear error', async () => {
   assert.equal(result.exitCode, 1);
   assert.equal(result.signal, null);
   assert.match(spawned.getStderr(), /Unknown command "unknown-command"\./);
-  assert.match(spawned.getStderr(), /Run "pnpm --filter @anydocs\/cli cli help" for usage\./);
+  assert.match(spawned.getStderr(), /Run "anydocs help" for usage\./);
 });
 
 test('init prints next-step commands after creating a project', async () => {
@@ -179,8 +179,8 @@ test('init prints next-step commands after creating a project', async () => {
     assert.match(spawned.getStdout(), /Initialized Anydocs project/);
     assert.match(spawned.getStdout(), /skill\.md/);
     assert.match(spawned.getStdout(), /Next:/);
-    assert.match(spawned.getStdout(), /pnpm --filter @anydocs\/cli cli build/);
-    assert.match(spawned.getStdout(), /pnpm --filter @anydocs\/cli cli preview/);
+    assert.match(spawned.getStdout(), /Build the project: anydocs build/);
+    assert.match(spawned.getStdout(), /Preview it locally: anydocs preview/);
     assert.equal(spawned.getStderr(), '');
     await access(path.join(repoRoot, 'skill.md'));
   } finally {
@@ -422,7 +422,7 @@ test('build emits a deployable static docs site and exits successfully', async (
     assert.equal(result.signal, null);
     assert.match(spawned.getStdout(), /Static site root:/);
     assert.match(spawned.getStdout(), /Entrypoint:/);
-    assert.match(spawned.getStdout(), /Next: preview locally with pnpm --filter @anydocs\/cli cli preview/);
+    assert.match(spawned.getStdout(), /Next: preview locally with anydocs preview/);
     assert.equal(spawned.getStderr(), '');
     await access(path.join(repoRoot, 'dist', 'index.html'));
     await access(path.join(repoRoot, 'dist', 'en', 'docs', 'welcome', 'index.html'));
