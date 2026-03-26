@@ -8,20 +8,77 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "54553592": {
-      "id": "54553592",
+    "a449708a": {
+      "id": "a449708a",
+      "type": "HeadingOne",
+      "value": [
+        {
+          "id": "80b4bcfc",
+          "type": "heading-one",
+          "children": [
+            {
+              "text": "订单支付通知"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 0,
+        "depth": 0
+      }
+    },
+    "1fa73464": {
+      "id": "1fa73464",
+      "type": "Paragraph",
+      "value": [
+        {
+          "id": "c108a7f7",
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "订单状态变化时，支付引擎通过 callback_url 发起回调。"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 1,
+        "depth": 0
+      }
+    },
+    "e3288025": {
+      "id": "e3288025",
+      "type": "HeadingTwo",
+      "value": [
+        {
+          "id": "275d3406",
+          "type": "heading-two",
+          "children": [
+            {
+              "text": "回调事件类型 (event_type)"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 2,
+        "depth": 0
+      }
+    },
+    "d991167e": {
+      "id": "d991167e",
       "type": "Table",
       "value": [
         {
-          "id": "501bb6ac",
+          "id": "9760b428",
           "type": "table",
           "children": [
             {
-              "id": "7fc5f90b",
+              "id": "770ad5e9",
               "type": "table-row",
               "children": [
                 {
-                  "id": "7ec6bc67",
+                  "id": "99ead13c",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -34,7 +91,7 @@
                   }
                 },
                 {
-                  "id": "01b4b862",
+                  "id": "5383d064",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -49,11 +106,11 @@
               ]
             },
             {
-              "id": "32d6744e",
+              "id": "b7fb2871",
               "type": "table-row",
               "children": [
                 {
-                  "id": "14a7ed1d",
+                  "id": "a011ad1d",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -66,7 +123,7 @@
                   }
                 },
                 {
-                  "id": "953a1020",
+                  "id": "20fb123d",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -81,11 +138,11 @@
               ]
             },
             {
-              "id": "d8e330d1",
+              "id": "d7dcd44b",
               "type": "table-row",
               "children": [
                 {
-                  "id": "e2210600",
+                  "id": "3dc67e47",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -98,7 +155,7 @@
                   }
                 },
                 {
-                  "id": "9714ba5b",
+                  "id": "c2e63b36",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -113,11 +170,11 @@
               ]
             },
             {
-              "id": "a57955c4",
+              "id": "ce3d66b7",
               "type": "table-row",
               "children": [
                 {
-                  "id": "d4b915f6",
+                  "id": "c5fe8132",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -130,7 +187,7 @@
                   }
                 },
                 {
-                  "id": "ddda2d0a",
+                  "id": "96a8c740",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -145,11 +202,11 @@
               ]
             },
             {
-              "id": "891aa443",
+              "id": "fdf270b7",
               "type": "table-row",
               "children": [
                 {
-                  "id": "aee1802c",
+                  "id": "00e631db",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -162,7 +219,7 @@
                   }
                 },
                 {
-                  "id": "914f4673",
+                  "id": "07800ebf",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -177,11 +234,11 @@
               ]
             },
             {
-              "id": "d33fb0bf",
+              "id": "f2aed9cb",
               "type": "table-row",
               "children": [
                 {
-                  "id": "f0c821db",
+                  "id": "174d0d19",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -194,7 +251,7 @@
                   }
                 },
                 {
-                  "id": "0f10e442",
+                  "id": "49902096",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -209,11 +266,11 @@
               ]
             },
             {
-              "id": "4594d176",
+              "id": "5b249769",
               "type": "table-row",
               "children": [
                 {
-                  "id": "ddf2812c",
+                  "id": "edc52365",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -226,7 +283,7 @@
                   }
                 },
                 {
-                  "id": "e5897a6b",
+                  "id": "76b8480f",
                   "type": "table-data-cell",
                   "children": [
                     {
@@ -256,69 +313,12 @@
         "depth": 0
       }
     },
-    "fe63ad33": {
-      "id": "fe63ad33",
-      "type": "HeadingOne",
-      "value": [
-        {
-          "id": "7c86e6b0",
-          "type": "heading-one",
-          "children": [
-            {
-              "text": "订单支付通知"
-            }
-          ]
-        }
-      ],
-      "meta": {
-        "order": 0,
-        "depth": 0
-      }
-    },
-    "18918fdb": {
-      "id": "18918fdb",
-      "type": "Paragraph",
-      "value": [
-        {
-          "id": "380c9881",
-          "type": "paragraph",
-          "children": [
-            {
-              "text": "订单状态变化时，支付引擎通过 callback_url 发起回调。"
-            }
-          ]
-        }
-      ],
-      "meta": {
-        "order": 1,
-        "depth": 0
-      }
-    },
-    "ea436519": {
-      "id": "ea436519",
+    "9ea66d1a": {
+      "id": "9ea66d1a",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "ca28169d",
-          "type": "heading-two",
-          "children": [
-            {
-              "text": "回调事件类型 (event_type)"
-            }
-          ]
-        }
-      ],
-      "meta": {
-        "order": 2,
-        "depth": 0
-      }
-    },
-    "b92b63de": {
-      "id": "b92b63de",
-      "type": "HeadingTwo",
-      "value": [
-        {
-          "id": "040e0f2c",
+          "id": "b3e5773a",
           "type": "heading-two",
           "children": [
             {
@@ -332,12 +332,12 @@
         "depth": 0
       }
     },
-    "379d4638": {
-      "id": "379d4638",
+    "32be94ad": {
+      "id": "32be94ad",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "79fdf6b2",
+          "id": "85995fc0",
           "type": "heading-two",
           "children": [
             {

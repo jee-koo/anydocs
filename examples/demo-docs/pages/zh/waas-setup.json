@@ -8,16 +8,16 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "02a879de": {
-      "id": "02a879de",
+    "ddc70a05": {
+      "id": "ddc70a05",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "591015f1",
+          "id": "fbdd3e0f",
           "type": "heading-one",
           "children": [
             {
-              "text": "WaaS 项目准备"
+              "text": "WaaS 开发前准备"
             }
           ]
         }
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "b5cf2fd2": {
-      "id": "b5cf2fd2",
+    "f8dcc8e7": {
+      "id": "f8dcc8e7",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "4c99901d",
+          "id": "c848dc60",
           "type": "heading-two",
           "children": [
             {
@@ -46,16 +46,16 @@
         "depth": 0
       }
     },
-    "b8927d38": {
-      "id": "b8927d38",
+    "b47d5582": {
+      "id": "b47d5582",
       "type": "Paragraph",
       "value": [
         {
-          "id": "e7826370",
+          "id": "f262aaf4",
           "type": "paragraph",
           "children": [
             {
-              "text": "如果使用 SDK，请参阅对应语言的 SDK 指南（Java、Go、PHP、C#）。"
+              "text": "如果您选择使用 WaaS SDK 而不是手动编写 API 请求，请参阅与您选择的编程语言（Java、Go、Php、C#）相对应的 SDK 指南，将 SDK 集成到您的项目中。"
             }
           ]
         }
@@ -65,16 +65,16 @@
         "depth": 0
       }
     },
-    "61b084f7": {
-      "id": "61b084f7",
+    "cd46abf0": {
+      "id": "cd46abf0",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "c9ce7cc1",
+          "id": "4cedb639",
           "type": "heading-two",
           "children": [
             {
-              "text": "设置步骤"
+              "text": "设置账户"
             }
           ]
         }
@@ -84,20 +84,16 @@
         "depth": 0
       }
     },
-    "7043d802": {
-      "id": "7043d802",
-      "type": "NumberedList",
+    "69cec90c": {
+      "id": "69cec90c",
+      "type": "Paragraph",
       "value": [
         {
-          "id": "3b131304",
-          "type": "numbered-list",
+          "id": "1e8802c8",
+          "type": "paragraph",
           "children": [
             {
-              "text": "设置账户",
-              "bold": true
-            },
-            {
-              "text": " — 创建团队，设置开发者角色"
+              "text": "按照团队管理中的说明创建您的团队，如果团队已经创建，请让您的团队管理员在“管理-成员”邀请您加入团队，并将您的角色设置为开发者。"
             }
           ]
         }
@@ -107,20 +103,16 @@
         "depth": 0
       }
     },
-    "bc06f2c2": {
-      "id": "bc06f2c2",
-      "type": "NumberedList",
+    "8af735ba": {
+      "id": "8af735ba",
+      "type": "HeadingTwo",
       "value": [
         {
-          "id": "bb5a609a",
-          "type": "numbered-list",
+          "id": "08ad9799",
+          "type": "heading-two",
           "children": [
             {
-              "text": "创建项目",
-              "bold": true
-            },
-            {
-              "text": " — Cregis 客户端 > WaaS 项目 > 创建（需先创建钱包）"
+              "text": "创建项目"
             }
           ]
         }
@@ -130,20 +122,16 @@
         "depth": 0
       }
     },
-    "99f91e99": {
-      "id": "99f91e99",
-      "type": "NumberedList",
+    "7615f311": {
+      "id": "7615f311",
+      "type": "Paragraph",
       "value": [
         {
-          "id": "32a8029b",
-          "type": "numbered-list",
+          "id": "ba427fd6",
+          "type": "paragraph",
           "children": [
             {
-              "text": "配置 IP 白名单",
-              "bold": true
-            },
-            {
-              "text": " — 设置 > IP 白名单"
+              "text": "在 Cregis 客户端创建您的WaaS项目并进行相应配置。"
             }
           ]
         }
@@ -153,20 +141,16 @@
         "depth": 0
       }
     },
-    "2da8192c": {
-      "id": "2da8192c",
+    "1f7844f4": {
+      "id": "1f7844f4",
       "type": "NumberedList",
       "value": [
         {
-          "id": "4f615e72",
+          "id": "f68ce41b",
           "type": "numbered-list",
           "children": [
             {
-              "text": "获取 API 信息",
-              "bold": true
-            },
-            {
-              "text": " — 设置 > 开发者，查看项目 ID 和 API Key"
+              "text": "登录 Cregis 客户端"
             }
           ]
         }
@@ -175,10 +159,126 @@
         "order": 7,
         "depth": 0
       }
+    },
+    "63d39f2e": {
+      "id": "63d39f2e",
+      "type": "NumberedList",
+      "value": [
+        {
+          "id": "41324c4d",
+          "type": "numbered-list",
+          "children": [
+            {
+              "text": "在左侧导航菜单中点击 "
+            },
+            {
+              "text": "WaaS项目 > 创建",
+              "bold": true
+            },
+            {
+              "text": "，在此之前需要先创建一个钱包"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 8,
+        "depth": 0
+      }
+    },
+    "e5ae05cf": {
+      "id": "e5ae05cf",
+      "type": "NumberedList",
+      "value": [
+        {
+          "id": "a4ff720c",
+          "type": "numbered-list",
+          "children": [
+            {
+              "text": "输入项目名称（最多 20 个字符），选择想要开启的接口类型"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 9,
+        "depth": 0
+      }
+    },
+    "a3b2d964": {
+      "id": "a3b2d964",
+      "type": "NumberedList",
+      "value": [
+        {
+          "id": "10fa2874",
+          "type": "numbered-list",
+          "children": [
+            {
+              "text": "点击确认进行身份验证，完成创建"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 10,
+        "depth": 0
+      }
+    },
+    "f7a01e9d": {
+      "id": "f7a01e9d",
+      "type": "NumberedList",
+      "value": [
+        {
+          "id": "51aea1ad",
+          "type": "numbered-list",
+          "children": [
+            {
+              "text": "为确保请求的安全性，请点击 "
+            },
+            {
+              "text": "WaaS项目 > 设置 > IP白名单",
+              "bold": true
+            },
+            {
+              "text": " 添加允许请求Cregis API的IP白名单"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 11,
+        "depth": 0
+      }
+    },
+    "ebb66bc2": {
+      "id": "ebb66bc2",
+      "type": "NumberedList",
+      "value": [
+        {
+          "id": "e75e0503",
+          "type": "numbered-list",
+          "children": [
+            {
+              "text": "点击 "
+            },
+            {
+              "text": "WaaS项目 > 设置 > 开发者",
+              "bold": true
+            },
+            {
+              "text": " 查询API接入信息"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 12,
+        "depth": 0
+      }
     }
   },
   "render": {
-    "markdown": "# WaaS 项目准备\n\n## 开始之前\n\n如果使用 SDK，请参阅对应语言的 SDK 指南（Java、Go、PHP、C#）。\n\n## 设置步骤\n\n1. **设置账户** — 创建团队，设置开发者角色\n2. **创建项目** — Cregis 客户端 > WaaS 项目 > 创建（需先创建钱包）\n3. **配置 IP 白名单** — 设置 > IP 白名单\n4. **获取 API 信息** — 设置 > 开发者，查看项目 ID 和 API Key",
+    "markdown": "# WaaS 开发前准备\n\n## 开始之前\n如果您选择使用 WaaS SDK 而不是手动编写 API 请求，请参阅与您选择的编程语言（Java、Go、Php、C#）相对应的 SDK 指南，将 SDK 集成到您的项目中。\n\n## 设置账户\n按照团队管理中的说明创建您的团队，如果团队已经创建，请让您的团队管理员在“管理-成员”邀请您加入团队，并将您的角色设置为开发者。\n\n## 创建项目\n在 Cregis 客户端创建您的WaaS项目并进行相应配置。\n1. 登录 Cregis 客户端\n2. 在左侧导航菜单中点击 **WaaS项目 > 创建**，在此之前需要先创建一个钱包\n3. 输入项目名称（最多 20 个字符），选择想要开启的接口类型\n4. 点击确认进行身份验证，完成创建\n5. 为确保请求的安全性，请点击 **WaaS项目 > 设置 > IP白名单** 添加允许请求Cregis API的IP白名单\n6. 点击 **WaaS项目 > 设置 > 开发者** 查询API接入信息",
     "plainText": "WaaS 项目准备  开始之前 如果使用 SDK，请参阅对应语言的 SDK 指南（Java、Go、PHP、C）。  设置步骤 1. 设置账户 — 创建团队，设置开发者角色 2. 创建项目 — Cregis 客户端  WaaS 项目  创建（需先创建钱包） 3. 配置 IP 白名单 — 设置  IP 白名单 4. 获取 API 信息 — 设置  开发者，查看项目 ID 和 API Key"
   }
 }

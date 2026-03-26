@@ -1,0 +1,1 @@
+export { MermaidPlugin } from './plugin';

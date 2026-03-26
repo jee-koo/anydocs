@@ -8,16 +8,16 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "b97ce552": {
-      "id": "b97ce552",
+    "786a546e": {
+      "id": "786a546e",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "16535ca2",
+          "id": "debd33e8",
           "type": "heading-one",
           "children": [
             {
-              "text": "支付引擎准备"
+              "text": "支付引擎 开发前准备"
             }
           ]
         }
@@ -27,16 +27,16 @@
         "depth": 0
       }
     },
-    "e7798de9": {
-      "id": "e7798de9",
+    "09ac6546": {
+      "id": "09ac6546",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "ccc0e76b",
+          "id": "34cb7de3",
           "type": "heading-two",
           "children": [
             {
-              "text": "设置步骤"
+              "text": "设置账户"
             }
           ]
         }
@@ -46,20 +46,16 @@
         "depth": 0
       }
     },
-    "e6379bc1": {
-      "id": "e6379bc1",
-      "type": "NumberedList",
+    "8666293b": {
+      "id": "8666293b",
+      "type": "Paragraph",
       "value": [
         {
-          "id": "975ac305",
-          "type": "numbered-list",
+          "id": "0c78737a",
+          "type": "paragraph",
           "children": [
             {
-              "text": "设置账户",
-              "bold": true
-            },
-            {
-              "text": " — 创建团队，设置开发者角色"
+              "text": "按照新手入门中的说明创建您的团队，如果团队已经创建，请让您的团队管理员在“管理-成员”邀请您加入团队，并将您的角色设置为开发者。"
             }
           ]
         }
@@ -69,20 +65,16 @@
         "depth": 0
       }
     },
-    "e0216da9": {
-      "id": "e0216da9",
-      "type": "NumberedList",
+    "8263d00f": {
+      "id": "8263d00f",
+      "type": "HeadingTwo",
       "value": [
         {
-          "id": "829ea4b8",
-          "type": "numbered-list",
+          "id": "7a5317cf",
+          "type": "heading-two",
           "children": [
             {
-              "text": "创建项目",
-              "bold": true
-            },
-            {
-              "text": " — Cregis 客户端 > 支付引擎 > 创建（需先创建钱包）"
+              "text": "创建项目"
             }
           ]
         }
@@ -92,20 +84,16 @@
         "depth": 0
       }
     },
-    "c1d443c5": {
-      "id": "c1d443c5",
-      "type": "NumberedList",
+    "172a5ace": {
+      "id": "172a5ace",
+      "type": "Paragraph",
       "value": [
         {
-          "id": "e2bcb576",
-          "type": "numbered-list",
+          "id": "0629e55f",
+          "type": "paragraph",
           "children": [
             {
-              "text": "配置 IP 白名单",
-              "bold": true
-            },
-            {
-              "text": " — 项目设置 > IP 白名单"
+              "text": "在 Cregis 客户端创建您的支付引擎并进行相应配置。"
             }
           ]
         }
@@ -115,20 +103,16 @@
         "depth": 0
       }
     },
-    "5eee00f0": {
-      "id": "5eee00f0",
+    "6efa6197": {
+      "id": "6efa6197",
       "type": "NumberedList",
       "value": [
         {
-          "id": "7bc180ff",
+          "id": "ec713b7d",
           "type": "numbered-list",
           "children": [
             {
-              "text": "获取 API 信息",
-              "bold": true
-            },
-            {
-              "text": " — 项目设置 > 开发者"
+              "text": "登录 Cregis 客户端（生产环境）"
             }
           ]
         }
@@ -137,10 +121,126 @@
         "order": 5,
         "depth": 0
       }
+    },
+    "67e0dc1a": {
+      "id": "67e0dc1a",
+      "type": "NumberedList",
+      "value": [
+        {
+          "id": "46817664",
+          "type": "numbered-list",
+          "children": [
+            {
+              "text": "在左侧导航菜单中点击 "
+            },
+            {
+              "text": "支付引擎 > 创建",
+              "bold": true
+            },
+            {
+              "text": "，在此之前需要先创建一个钱包"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 6,
+        "depth": 0
+      }
+    },
+    "b40c21ef": {
+      "id": "b40c21ef",
+      "type": "NumberedList",
+      "value": [
+        {
+          "id": "7c9612e6",
+          "type": "numbered-list",
+          "children": [
+            {
+              "text": "输入项目名称（2-20 个字符），进行配置"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 7,
+        "depth": 0
+      }
+    },
+    "6d9c60d4": {
+      "id": "6d9c60d4",
+      "type": "NumberedList",
+      "value": [
+        {
+          "id": "a2d450ae",
+          "type": "numbered-list",
+          "children": [
+            {
+              "text": "点击确认进行身份验证，完成创建"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 8,
+        "depth": 0
+      }
+    },
+    "9342d4b4": {
+      "id": "9342d4b4",
+      "type": "NumberedList",
+      "value": [
+        {
+          "id": "25f53c4f",
+          "type": "numbered-list",
+          "children": [
+            {
+              "text": "为确保请求的安全性，请点击项目 "
+            },
+            {
+              "text": "设置 > IP白名单",
+              "bold": true
+            },
+            {
+              "text": " 添加允许请求Cregis API的IP白名单"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 9,
+        "depth": 0
+      }
+    },
+    "328467ed": {
+      "id": "328467ed",
+      "type": "NumberedList",
+      "value": [
+        {
+          "id": "1c6d5b44",
+          "type": "numbered-list",
+          "children": [
+            {
+              "text": "点击项目 "
+            },
+            {
+              "text": "设置 > 开发者",
+              "bold": true
+            },
+            {
+              "text": " 查询API接入信息"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 10,
+        "depth": 0
+      }
     }
   },
   "render": {
-    "markdown": "# 支付引擎准备\n\n## 设置步骤\n\n1. **设置账户** — 创建团队，设置开发者角色\n2. **创建项目** — Cregis 客户端 > 支付引擎 > 创建（需先创建钱包）\n3. **配置 IP 白名单** — 项目设置 > IP 白名单\n4. **获取 API 信息** — 项目设置 > 开发者",
+    "markdown": "# 支付引擎 开发前准备\n\n## 设置账户\n按照新手入门中的说明创建您的团队，如果团队已经创建，请让您的团队管理员在“管理-成员”邀请您加入团队，并将您的角色设置为开发者。\n\n## 创建项目\n在 Cregis 客户端创建您的支付引擎并进行相应配置。\n1. 登录 Cregis 客户端（生产环境）\n2. 在左侧导航菜单中点击 **支付引擎 > 创建**，在此之前需要先创建一个钱包\n3. 输入项目名称（2-20 个字符），进行配置\n4. 点击确认进行身份验证，完成创建\n5. 为确保请求的安全性，请点击项目 **设置 > IP白名单** 添加允许请求Cregis API的IP白名单\n6. 点击项目 **设置 > 开发者** 查询API接入信息",
     "plainText": "支付引擎准备  设置步骤 1. 设置账户 — 创建团队，设置开发者角色 2. 创建项目 — Cregis 客户端  支付引擎  创建（需先创建钱包） 3. 配置 IP 白名单 — 项目设置  IP 白名单 4. 获取 API 信息 — 项目设置  开发者"
   }
 }

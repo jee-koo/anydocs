@@ -28,6 +28,7 @@ import Divider from '@yoopta/divider';
 import Link from '@yoopta/link';
 
 import { Bold, CodeMark, Italic, Strike, Underline } from '@yoopta/marks';
+import { MermaidPlugin } from './plugins/mermaid';
 
 export function YooptaDocEditor({
   id,
@@ -87,6 +88,7 @@ export function YooptaDocEditor({
         Callout,
         Divider,
         Link,
+        MermaidPlugin,
       ]);
 
       return themed;

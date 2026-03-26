@@ -13,7 +13,8 @@ import {
   Minus, 
   Image as ImageIcon, 
   Table as TableIcon, 
-  Link as LinkIcon 
+  Link as LinkIcon,
+  Workflow
 } from 'lucide-react';
 
 const ICONS_MAP: Record<string, React.ElementType> = {
@@ -31,6 +32,7 @@ const ICONS_MAP: Record<string, React.ElementType> = {
   Table: TableIcon,
   Divider: Minus,
   Link: LinkIcon,
+  Mermaid: Workflow,
 };
 
 export const YooptaSlashCommandMenu = () => (
