@@ -24,6 +24,20 @@ async function createTempRepoRoot(): Promise<string> {
   return mkdtemp(path.join(os.tmpdir(), 'anydocs-cli-watch-'));
 }
 
+function createWaitForExit(child: ChildProcessWithoutNullStreams) {
+  return () =>
+    new Promise<{ exitCode: number | null; signal: NodeJS.Signals | null }>((resolve) => {
+      if (child.exitCode !== null || child.signalCode !== null) {
+        resolve({ exitCode: child.exitCode, signal: child.signalCode });
+        return;
+      }
+
+      child.once('exit', (exitCode, signal) => {
+        resolve({ exitCode, signal });
+      });
+    });
+}
+
 function spawnCli(args: string[]): SpawnedCli {
   const child = spawn(process.execPath, ['--experimental-strip-types', CLI_ENTRY, ...args], {
     cwd: CLI_WORKDIR,
@@ -46,12 +60,7 @@ function spawnCli(args: string[]): SpawnedCli {
     getCombinedOutput: () => `${stdout}${stderr}`,
     getStdout: () => stdout,
     getStderr: () => stderr,
-    waitForExit: () =>
-      new Promise((resolve) => {
-        child.once('exit', (exitCode, signal) => {
-          resolve({ exitCode, signal });
-        });
-      }),
+    waitForExit: createWaitForExit(child),
   };
 }
 

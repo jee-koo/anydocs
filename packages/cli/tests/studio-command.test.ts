@@ -23,6 +23,20 @@ async function createTempRepoRoot(prefix: string): Promise<string> {
   return mkdtemp(path.join(os.tmpdir(), prefix));
 }
 
+function createWaitForExit(child: ChildProcessWithoutNullStreams) {
+  return () =>
+    new Promise<{ exitCode: number | null; signal: NodeJS.Signals | null }>((resolve) => {
+      if (child.exitCode !== null || child.signalCode !== null) {
+        resolve({ exitCode: child.exitCode, signal: child.signalCode });
+        return;
+      }
+
+      child.once('exit', (exitCode, signal) => {
+        resolve({ exitCode, signal });
+      });
+    });
+}
+
 function spawnCli(args: string[]): SpawnedCli {
   const child = spawn(process.execPath, ['--experimental-strip-types', CLI_ENTRY, ...args], {
     cwd: CLI_WORKDIR,
@@ -44,22 +58,28 @@ function spawnCli(args: string[]): SpawnedCli {
     child,
     getCombinedOutput: () => `${stdout}${stderr}`,
     getStdout: () => stdout,
-    waitForExit: () =>
-      new Promise((resolve) => {
-        child.once('exit', (exitCode, signal) => {
-          resolve({ exitCode, signal });
-        });
-      }),
+    waitForExit: createWaitForExit(child),
   };
 }
 
-async function waitForOutput(readOutput: () => string, expected: RegExp, timeoutMs = 120_000): Promise<string> {
+async function waitForOutputOrChildExit(
+  child: ChildProcessWithoutNullStreams,
+  readOutput: () => string,
+  expected: RegExp,
+  timeoutMs = 120_000,
+): Promise<string> {
   const maxAttempts = Math.ceil(timeoutMs / 100);
 
   for (let attempt = 0; attempt < maxAttempts; attempt++) {
     const output = readOutput();
     if (expected.test(output)) {
       return output;
+    }
+
+    if (child.exitCode !== null) {
+      throw new Error(
+        `CLI studio process exited before emitting expected output (exit=${child.exitCode}).\n${output}`.trim(),
+      );
     }
 
     await delay(100);
@@ -96,7 +116,8 @@ test('studio starts a locked single-project Studio server and rejects cross-proj
     const spawned = spawnCli(['studio', repoRoot, '--no-open', '--json']);
 
     try {
-      const output = await waitForOutput(
+      const output = await waitForOutputOrChildExit(
+        spawned.child,
         spawned.getCombinedOutput,
         /"url": "http:\/\/127\.0\.0\.1:\d+\/studio"/,
         240_000,

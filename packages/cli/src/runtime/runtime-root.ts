@@ -82,7 +82,10 @@ export async function configureDocsRuntimeEnv(): Promise<string> {
 
 export async function resolveStudioRuntimeRoot(): Promise<string> {
   const candidates = [
+    path.resolve(CLI_PACKAGE_ROOT, '../web'),
     path.join(CLI_PACKAGE_ROOT, 'studio-runtime'),
+    process.cwd(),
+    path.join(process.cwd(), 'packages', 'web'),
   ];
 
   for (const candidate of candidates) {
