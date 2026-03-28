@@ -6,10 +6,12 @@ import test from 'node:test';
 import { setTimeout as delay } from 'node:timers/promises';
 
 import { createDocsRepository, saveNavigation, savePage } from '../src/fs/docs-repository.ts';
+import { loadProjectContract } from '../src/fs/content-repository.ts';
 import { updateProjectConfig } from '../src/fs/content-repository.ts';
 import { initializeProject } from '../src/services/init-service.ts';
-import { runBuildWorkflow } from '../src/services/build-service.ts';
+import { loadPublishedSiteBuildArtifacts, runBuildWorkflow } from '../src/services/build-service.ts';
 import { runPreviewWorkflow } from '../src/services/preview-service.ts';
+import { writePublishedArtifacts } from '../src/publishing/build-artifacts.ts';
 
 async function createTempRepoRoot(): Promise<string> {
   return mkdtemp(path.join(os.tmpdir(), 'anydocs-build-preview-'));
@@ -50,6 +52,19 @@ async function listFilesRecursively(rootDir: string): Promise<string[]> {
   }
 
   return files;
+}
+
+async function writeMachineReadableArtifacts(repoRoot: string) {
+  const contractResult = await loadProjectContract(repoRoot);
+  assert.equal(contractResult.ok, true);
+
+  const siteArtifacts = await loadPublishedSiteBuildArtifacts({ repoRoot });
+  await writePublishedArtifacts(contractResult.value, siteArtifacts);
+
+  return {
+    contract: contractResult.value,
+    siteArtifacts,
+  };
 }
 
 test('runBuildWorkflow emits a deployable docs site at the output root', { timeout: 120_000, concurrency: false }, async () => {
@@ -153,7 +168,7 @@ test('runBuildWorkflow emits a deployable docs site at the output root', { timeo
   }
 });
 
-test('runBuildWorkflow emits a fallback chunk for published pages without headings', { timeout: 120_000, concurrency: false }, async () => {
+test('published artifacts emit a fallback chunk for published pages without headings', async () => {
   const repoRoot = await createTempRepoRoot();
 
   try {
@@ -171,9 +186,9 @@ test('runBuildWorkflow emits a fallback chunk for published pages without headin
       },
     });
 
-    const result = await runBuildWorkflow({ repoRoot });
+    const { contract } = await writeMachineReadableArtifacts(repoRoot);
     const chunks = JSON.parse(
-      await readFile(path.join(result.machineReadableRoot, 'chunks.en.json'), 'utf8'),
+      await readFile(path.join(contract.paths.machineReadableRoot, 'chunks.en.json'), 'utf8'),
     ) as {
       chunks: Array<{ id: string; pageId: string; headingPath: string[]; text: string; order: number }>;
     };
@@ -221,7 +236,7 @@ test('runBuildWorkflow keeps an empty-state docs shell when there are no publish
   }
 });
 
-test('runBuildWorkflow serializes expanded classic-docs theme metadata into build artifacts', { timeout: 120_000, concurrency: false }, async () => {
+test('published artifacts serialize expanded classic-docs theme metadata', async () => {
   const repoRoot = await createTempRepoRoot();
 
   try {
@@ -253,8 +268,8 @@ test('runBuildWorkflow serializes expanded classic-docs theme metadata into buil
     });
     assert.equal(update.ok, true);
 
-    const result = await runBuildWorkflow({ repoRoot });
-    const mcpIndex = JSON.parse(await readFile(path.join(result.machineReadableRoot, 'index.json'), 'utf8')) as {
+    const { contract } = await writeMachineReadableArtifacts(repoRoot);
+    const mcpIndex = JSON.parse(await readFile(path.join(contract.paths.machineReadableRoot, 'index.json'), 'utf8')) as {
       site: {
         theme: {
           branding?: { siteTitle?: string; logoSrc?: string };
@@ -264,7 +279,7 @@ test('runBuildWorkflow serializes expanded classic-docs theme metadata into buil
         };
       };
     };
-    const manifest = JSON.parse(await readFile(path.join(result.artifactRoot, 'build-manifest.json'), 'utf8')) as {
+    const manifest = JSON.parse(await readFile(path.join(contract.paths.artifactRoot, 'build-manifest.json'), 'utf8')) as {
       source: {
         site: {
           theme: {
@@ -303,7 +318,7 @@ test('runBuildWorkflow serializes expanded classic-docs theme metadata into buil
   }
 });
 
-test('runBuildWorkflow serializes atlas-docs top navigation metadata into build artifacts', { timeout: 120_000, concurrency: false }, async () => {
+test('published artifacts serialize atlas-docs top navigation metadata', async () => {
   const repoRoot = await createTempRepoRoot();
 
   try {
@@ -365,14 +380,14 @@ test('runBuildWorkflow serializes atlas-docs top navigation metadata into build 
       },
     });
 
-    const result = await runBuildWorkflow({ repoRoot });
-    const mcpIndex = JSON.parse(await readFile(path.join(result.machineReadableRoot, 'index.json'), 'utf8')) as {
+    const { contract } = await writeMachineReadableArtifacts(repoRoot);
+    const mcpIndex = JSON.parse(await readFile(path.join(contract.paths.machineReadableRoot, 'index.json'), 'utf8')) as {
       site: {
         theme: { id: string };
         navigation?: { topNav?: Array<{ id: string; type: string; groupId?: string; href?: string }> };
       };
     };
-    const manifest = JSON.parse(await readFile(path.join(result.artifactRoot, 'build-manifest.json'), 'utf8')) as {
+    const manifest = JSON.parse(await readFile(path.join(contract.paths.artifactRoot, 'build-manifest.json'), 'utf8')) as {
       source: {
         site: {
           theme: { id: string };
