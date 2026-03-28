@@ -8,16 +8,16 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "ffbf042f": {
-      "id": "ffbf042f",
+    "b54200ac": {
+      "id": "b54200ac",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "5994d01c",
+          "id": "41570689",
           "type": "heading-one",
           "children": [
             {
-              "text": "调试工具与测试代币"
+              "text": "SDK & 开发工具"
             }
           ]
         }
@@ -27,16 +27,16 @@
         "depth": 0
       }
     },
-    "a79773cb": {
-      "id": "a79773cb",
+    "ee3f6577": {
+      "id": "ee3f6577",
       "type": "Paragraph",
       "value": [
         {
-          "id": "146b3b45",
+          "id": "bdf3f30e",
           "type": "paragraph",
           "children": [
             {
-              "text": "测试代币只能在开发环境使用。"
+              "text": "如果您选择使用 SDK 而不是手动编写 API 请求，请参阅与您选择的编程语言相对应的 SDK 指南。"
             }
           ]
         }
@@ -46,127 +46,16 @@
         "depth": 0
       }
     },
-    "f77d2e7d": {
-      "id": "f77d2e7d",
-      "type": "Table",
+    "e3b46566": {
+      "id": "e3b46566",
+      "type": "Paragraph",
       "value": [
         {
-          "id": "f758340a",
-          "type": "table-row",
+          "id": "657d6a80",
+          "type": "paragraph",
           "children": [
             {
-              "id": "6c8317ef",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "网络"
-                }
-              ]
-            },
-            {
-              "id": "860ce418",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "领取地址"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "fb6279a4",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "00753c54",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Ripple (XRP)"
-                }
-              ]
-            },
-            {
-              "id": "2cc484d1",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "https://test.bithomp.com/en/faucet"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "d991d563",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "0b5d03c8",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "BNB Smart Chain"
-                }
-              ]
-            },
-            {
-              "id": "e65e58a3",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "https://www.bnbchain.org/en/testnet-faucet"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "23221173",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "9fad1c10",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "TRON (TRX)"
-                }
-              ]
-            },
-            {
-              "id": "c8f4dc08",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "通过 Discord 社区领取"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "9cf9973f",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "ad295c20",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Solana (SOL)"
-                }
-              ]
-            },
-            {
-              "id": "68fe0b9f",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "https://faucet.solana.com"
-                }
-              ]
+              "text": "我们官方提供以下 SDK 支持："
             }
           ]
         }
@@ -175,10 +64,200 @@
         "order": 2,
         "depth": 0
       }
+    },
+    "3bd9a22a": {
+      "id": "3bd9a22a",
+      "type": "BulletedList",
+      "value": [
+        {
+          "id": "959a87ab",
+          "type": "bulleted-list",
+          "children": [
+            {
+              "text": "Java SDK"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 3,
+        "depth": 0
+      }
+    },
+    "0146f614": {
+      "id": "0146f614",
+      "type": "BulletedList",
+      "value": [
+        {
+          "id": "dcee893c",
+          "type": "bulleted-list",
+          "children": [
+            {
+              "text": "Go SDK"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 4,
+        "depth": 0
+      }
+    },
+    "d93a106c": {
+      "id": "d93a106c",
+      "type": "BulletedList",
+      "value": [
+        {
+          "id": "7cd1c89a",
+          "type": "bulleted-list",
+          "children": [
+            {
+              "text": "Php SDK"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 5,
+        "depth": 0
+      }
+    },
+    "a7da95cf": {
+      "id": "a7da95cf",
+      "type": "BulletedList",
+      "value": [
+        {
+          "id": "8c1ddb24",
+          "type": "bulleted-list",
+          "children": [
+            {
+              "text": "C# SDK"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 6,
+        "depth": 0
+      }
+    },
+    "0797796a": {
+      "id": "0797796a",
+      "type": "HeadingTwo",
+      "value": [
+        {
+          "id": "f0234633",
+          "type": "heading-two",
+          "children": [
+            {
+              "text": "获取测试网代币"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 7,
+        "depth": 0
+      }
+    },
+    "f1fa4a07": {
+      "id": "f1fa4a07",
+      "type": "Paragraph",
+      "value": [
+        {
+          "id": "2ba0438c",
+          "type": "paragraph",
+          "children": [
+            {
+              "text": "了解如何获取测试代币以测试您与 Cregis API 的集成，测试代币只能在开发环境使用。"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 8,
+        "depth": 0
+      }
+    },
+    "7c76f84d": {
+      "id": "7c76f84d",
+      "type": "BulletedList",
+      "value": [
+        {
+          "id": "dbf5a49d",
+          "type": "bulleted-list",
+          "children": [
+            {
+              "text": "领取 Ripple（XRP）测试币: https://test.bithomp.com/en/faucet"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 9,
+        "depth": 0
+      }
+    },
+    "6ad5df85": {
+      "id": "6ad5df85",
+      "type": "BulletedList",
+      "value": [
+        {
+          "id": "5cd8928a",
+          "type": "bulleted-list",
+          "children": [
+            {
+              "text": "领取 BNB Smart Chain（BSC）测试币: https://www.bnbchain.org/en/testnet-faucet"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 10,
+        "depth": 0
+      }
+    },
+    "1395001f": {
+      "id": "1395001f",
+      "type": "BulletedList",
+      "value": [
+        {
+          "id": "09fa8967",
+          "type": "bulleted-list",
+          "children": [
+            {
+              "text": "领取 TRON（TRX）测试币: https://discord.com/channels/@me"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 11,
+        "depth": 0
+      }
+    },
+    "97537c0e": {
+      "id": "97537c0e",
+      "type": "BulletedList",
+      "value": [
+        {
+          "id": "7ce863a8",
+          "type": "bulleted-list",
+          "children": [
+            {
+              "text": "领取 Solana（SOL）测试币: https://faucet.solana.com/"
+            }
+          ]
+        }
+      ],
+      "meta": {
+        "order": 12,
+        "depth": 0
+      }
     }
   },
   "render": {
-    "markdown": "# 调试工具与测试代币\n\n测试代币只能在开发环境使用。\n\n| 网络 | 领取地址 |\n|------|----------|\n| Ripple (XRP) | https://test.bithomp.com/en/faucet |\n| BNB Smart Chain | https://www.bnbchain.org/en/testnet-faucet |\n| TRON (TRX) | 通过 Discord 社区领取 |\n| Solana (SOL) | https://faucet.solana.com |",
+    "markdown": "# SDK & 开发工具\n\n如果您选择使用 SDK 而不是手动编写 API 请求，请参阅与您选择的编程语言相对应的 SDK 指南。\n我们官方提供以下 SDK 支持：\n- Java SDK\n- Go SDK\n- Php SDK\n- C# SDK\n\n## 获取测试网代币\n了解如何获取测试代币以测试您与 Cregis API 的集成，测试代币只能在开发环境使用。\n- 领取 Ripple（XRP）测试币: https://test.bithomp.com/en/faucet\n- 领取 BNB Smart Chain（BSC）测试币: https://www.bnbchain.org/en/testnet-faucet\n- 领取 TRON（TRX）测试币: https://discord.com/channels/@me\n- 领取 Solana（SOL）测试币: https://faucet.solana.com/\n",
     "plainText": "调试工具与测试代币 测试代币只能在开发环境使用。  网络  领取地址   Ripple XRP  https://test.bithomp.com/en/faucet   BNB Smart Chain  https://www.bnbchain.org/en/testnetfaucet   TRON TRX  通过 Discord 社区领取   Solana SOL  https://faucet.solana.com"
   }
 }

@@ -14,6 +14,7 @@ export const DOCS_YOOPTA_ALLOWED_TYPES = [
   'Image',
   'Table',
   'Link',
+  'Mermaid',
 ] as const;
 
 export const DOCS_YOOPTA_ALLOWED_MARKS = [

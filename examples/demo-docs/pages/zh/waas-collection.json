@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "85876574": {
-      "id": "85876574",
+    "5f364d5e": {
+      "id": "5f364d5e",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "a93fcff7",
+          "id": "fee7421b",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "6d6a6d7a": {
-      "id": "6d6a6d7a",
+    "399b403c": {
+      "id": "399b403c",
       "type": "Paragraph",
       "value": [
         {
-          "id": "5ba8ba8a",
+          "id": "c0f07884",
           "type": "paragraph",
           "children": [
             {
@@ -47,261 +47,373 @@
         "depth": 0
       }
     },
-    "057fa9a5": {
-      "id": "057fa9a5",
+    "b19191dc": {
+      "id": "b19191dc",
       "type": "Table",
       "value": [
         {
-          "id": "34810f78",
-          "type": "table-row",
+          "id": "baad7226",
+          "type": "table",
           "children": [
             {
-              "id": "fa8463ac",
-              "type": "table-data-cell",
+              "id": "4cd51c07",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "参数"
+                  "id": "0be71d6e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "参数"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "7b756ed9",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "类型"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "a12bc2ee",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "必须"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "c8ccfbb4",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "说明"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "22c999f1",
-              "type": "table-data-cell",
+              "id": "d55ec8c8",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "类型"
+                  "id": "24a0d5e4",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "pid"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "049fd407",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "int64"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "0832d424",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "7693bd14",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "WaaS 项目 ID"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "a25292fe",
-              "type": "table-data-cell",
+              "id": "104d1ae0",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "必须"
+                  "id": "c5036d57",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "currency"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "80b14107",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "d66de802",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "0f451862",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "代币标识"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "b299d6ed",
-              "type": "table-data-cell",
+              "id": "afb71db3",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "说明"
+                  "id": "50514f78",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "from_address"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "7acf0b91",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "c16be439",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "919131bd",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "项目地址（禁用状态不允许）"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "f16a0bc5",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "ce497432",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "to_address"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "daaa2682",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "3c72fc0f",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "cf33bc8e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "接收地址（须为团队钱包地址）"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "a75dc309",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "05042d9c",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "amount"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "cd327e04",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "55399b69",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "否"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "33f028f2",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "归集金额，不传则全部"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             }
-          ]
-        },
-        {
-          "id": "be34952b",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "e8590ead",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "pid"
-                }
-              ]
-            },
-            {
-              "id": "89bab8fd",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "int64"
-                }
-              ]
-            },
-            {
-              "id": "bae4682f",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "80a0718e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "WaaS 项目 ID"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "f11897b6",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "4c7dd1b0",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "currency"
-                }
-              ]
-            },
-            {
-              "id": "4d8219ce",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "212e1bf9",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "49b5b314",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "代币标识"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "2b1583f7",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "79a6b29e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "from_address"
-                }
-              ]
-            },
-            {
-              "id": "1b475fe7",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "b5c2b943",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "69929ae8",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "项目地址（禁用状态不允许）"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "0234a7da",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "b2f5eadc",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "to_address"
-                }
-              ]
-            },
-            {
-              "id": "0312c0b3",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "7e5dd1ab",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "16997cb0",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "接收地址（须为团队钱包地址）"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "cbac4447",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "527ba43b",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "amount"
-                }
-              ]
-            },
-            {
-              "id": "4aab5dc7",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "c1bca160",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "否"
-                }
-              ]
-            },
-            {
-              "id": "1c70bfb0",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "归集金额，不传则全部"
-                }
-              ]
-            }
-          ]
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200,
+              200,
+              200
+            ]
+          }
         }
       ],
       "meta": {
@@ -309,12 +421,12 @@
         "depth": 0
       }
     },
-    "e0ef1599": {
-      "id": "e0ef1599",
+    "f8701907": {
+      "id": "f8701907",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "7a053d43",
+          "id": "eb2c1e71",
           "type": "heading-two",
           "children": [
             {

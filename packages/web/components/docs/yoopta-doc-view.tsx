@@ -19,6 +19,7 @@ import Callout from '@yoopta/callout';
 import Divider from '@yoopta/divider';
 import Link from '@yoopta/link';
 import { Bold, CodeMark, Italic, Strike, Underline } from '@yoopta/marks';
+import { MermaidPlugin } from '@/components/studio/plugins/mermaid';
 
 import { slugify } from '@/lib/docs/markdown';
 import { cn } from '@/lib/utils';
@@ -58,6 +59,7 @@ function createReaderPlugins() {
     Callout,
     Divider,
     Link,
+    MermaidPlugin,
   ]) as unknown as AnyPlugin[];
 }
 

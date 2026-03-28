@@ -8,16 +8,16 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "158bf83f": {
-      "id": "158bf83f",
+    "86be0fb7": {
+      "id": "86be0fb7",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "c309bcfb",
+          "id": "ad6ca98e",
           "type": "heading-one",
           "children": [
             {
-              "text": "环境说明"
+              "text": "环境"
             }
           ]
         }
@@ -27,16 +27,16 @@
         "depth": 0
       }
     },
-    "37cc6e68": {
-      "id": "37cc6e68",
+    "e54e0ada": {
+      "id": "e54e0ada",
       "type": "Paragraph",
       "value": [
         {
-          "id": "a8f95097",
+          "id": "acdf1f42",
           "type": "paragraph",
           "children": [
             {
-              "text": "Cregis API 提供开发环境和生产环境。建议先在开发环境测试，再部署到生产环境。"
+              "text": "Cregis API 提供了开发环境和生产环境。建议您先在开发环境中测试新功能，然后再将其部署到生产环境中。"
             }
           ]
         }
@@ -46,83 +46,159 @@
         "depth": 0
       }
     },
-    "fdd0d425": {
-      "id": "fdd0d425",
+    "5dde7fca": {
+      "id": "5dde7fca",
       "type": "Table",
       "value": [
         {
-          "id": "c2ba1765",
-          "type": "table-row",
+          "id": "ab3aa76a",
+          "type": "table",
           "children": [
             {
-              "id": "79ba76bf",
-              "type": "table-data-cell",
+              "id": "f5fb7ec1",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "环境"
+                  "id": "13173010",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "环境"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "8e0c86e1",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "用途说明"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "452a6bc4",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "客户端下载"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "abbe8f8b",
-              "type": "table-data-cell",
+              "id": "c2f37be5",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "用途"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "8bdf1881",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "02402132",
-              "type": "table-data-cell",
-              "children": [
+                  "id": "9748c33f",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "开发环境"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
                 {
-                  "text": "开发环境",
-                  "bold": true
-                }
-              ]
-            },
-            {
-              "id": "7f7aadc7",
-              "type": "table-data-cell",
-              "children": [
+                  "id": "b76ae2f8",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "用于功能开发、集成测试和问题调试的沙箱环境"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
                 {
-                  "text": "功能开发、集成测试和问题调试的沙箱环境"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "69a4f2d1",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "349421f1",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "生产环境",
-                  "bold": true
+                  "id": "57e4138a",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Windows、Mac、Android、iOS"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "7dabe757",
-              "type": "table-data-cell",
+              "id": "47126816",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "实际业务运营的正式环境"
+                  "id": "90677a76",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "生产环境"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "d2e2a7b9",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "用于实际业务运营的正式环境，处理真实用户交互和资产"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "c0858a3a",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Windows、Mac、Android、iOS"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             }
-          ]
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200,
+              200
+            ]
+          }
         }
       ],
       "meta": {
@@ -132,7 +208,7 @@
     }
   },
   "render": {
-    "markdown": "# 环境说明\n\nCregis API 提供开发环境和生产环境。建议先在开发环境测试，再部署到生产环境。\n\n| 环境 | 用途 |\n|------|------|\n| **开发环境** | 功能开发、集成测试和问题调试的沙箱环境 |\n| **生产环境** | 实际业务运营的正式环境 |",
+    "markdown": "# 环境\nCregis API 提供了开发环境和生产环境。建议您先在开发环境中测试新功能，然后再将其部署到生产环境中。\n\n| 环境 | 用途说明 | 客户端下载 |\n| --- | --- | --- |\n| 开发环境 | 用于功能开发、集成测试和问题调试的沙箱环境 | Windows、Mac、Android、iOS |\n| 生产环境 | 用于实际业务运营的正式环境，处理真实用户交互和资产 | Windows、Mac、Android、iOS |",
     "plainText": "环境说明 Cregis API 提供开发环境和生产环境。建议先在开发环境测试，再部署到生产环境。  环境  用途   开发环境  功能开发、集成测试和问题调试的沙箱环境   生产环境  实际业务运营的正式环境"
   }
 }

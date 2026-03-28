@@ -281,8 +281,8 @@ export function AtlasDocsReaderLayout({
 
       <div
         className={cn(
-          'mx-auto lg:min-h-[calc(100dvh-60px)] lg:max-w-[1600px]',
-          !isReferenceRoute && 'lg:grid lg:grid-cols-[280px_minmax(0,1fr)]',
+          'mx-auto lg:!min-h-[calc(100dvh-60px)] lg:!max-w-[1600px]',
+          !isReferenceRoute && 'lg:!grid lg:!grid-cols-[280px_minmax(0,1fr)]',
         )}
       >
         {!isReferenceRoute ? (

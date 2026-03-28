@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "fec7b943": {
-      "id": "fec7b943",
+    "95d0a7e7": {
+      "id": "95d0a7e7",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "edda0bea",
+          "id": "45d13ebb",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "94ae0978": {
-      "id": "94ae0978",
+    "5631da9e": {
+      "id": "5631da9e",
       "type": "Paragraph",
       "value": [
         {
-          "id": "96015d4a",
+          "id": "dfb0defe",
           "type": "paragraph",
           "children": [
             {
@@ -47,12 +47,12 @@
         "depth": 0
       }
     },
-    "8a19a77e": {
-      "id": "8a19a77e",
+    "72c89315": {
+      "id": "72c89315",
       "type": "Paragraph",
       "value": [
         {
-          "id": "9a2b86c4",
+          "id": "4a364b30",
           "type": "paragraph",
           "children": [
             {
@@ -66,177 +66,257 @@
         "depth": 0
       }
     },
-    "da21639a": {
-      "id": "da21639a",
+    "0dbeb0ba": {
+      "id": "0dbeb0ba",
       "type": "Table",
       "value": [
         {
-          "id": "ad6fffc7",
-          "type": "table-row",
+          "id": "4d63ca8c",
+          "type": "table",
           "children": [
             {
-              "id": "8e098c04",
-              "type": "table-data-cell",
+              "id": "e4e51e7d",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "参数"
+                  "id": "a19d816c",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "参数"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "051c327e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "类型"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "11ab1672",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "必须"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "d93aefe2",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "说明"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "530fac6e",
-              "type": "table-data-cell",
+              "id": "6dc3692f",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "类型"
+                  "id": "d25eef57",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "pid"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "2bc3fbe7",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "int64"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "43c10604",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "008c7c5f",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "WaaS 项目 ID"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "491fe338",
-              "type": "table-data-cell",
+              "id": "9b0ce616",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "必须"
+                  "id": "3cb4367f",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "address"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "778150e1",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "1d4c0d7d",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "f035b546",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "要校验的地址"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "502fd3e2",
-              "type": "table-data-cell",
+              "id": "65cdfe7f",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "说明"
+                  "id": "85015a0c",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "chain_id"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "34dbff1d",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "string"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "88839dee",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "是"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "aab0a281",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "区块链 ID"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             }
-          ]
-        },
-        {
-          "id": "88973119",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "b34f2f8e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "pid"
-                }
-              ]
-            },
-            {
-              "id": "438b4776",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "int64"
-                }
-              ]
-            },
-            {
-              "id": "89433d62",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "61bde997",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "WaaS 项目 ID"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "f3e7ea1b",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "e3252d85",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "address"
-                }
-              ]
-            },
-            {
-              "id": "43347fbf",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "009eb16a",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "cf0ee8a5",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "要校验的地址"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "7adf830d",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "d0179424",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "chain_id"
-                }
-              ]
-            },
-            {
-              "id": "f867c620",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "string"
-                }
-              ]
-            },
-            {
-              "id": "296858f6",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "是"
-                }
-              ]
-            },
-            {
-              "id": "d0aa8597",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "区块链 ID"
-                }
-              ]
-            }
-          ]
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200,
+              200,
+              200
+            ]
+          }
         }
       ],
       "meta": {
@@ -244,12 +324,12 @@
         "depth": 0
       }
     },
-    "b5863c16": {
-      "id": "b5863c16",
+    "868f2d95": {
+      "id": "868f2d95",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "ada617bd",
+          "id": "57d78c11",
           "type": "heading-two",
           "children": [
             {

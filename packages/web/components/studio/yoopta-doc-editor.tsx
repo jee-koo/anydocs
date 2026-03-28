@@ -3,29 +3,29 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import YooptaEditor, {
   createYooptaEditor,
+  type RenderBlockProps,
   type SlateElement,
   type YooptaContentValue,
   type YooptaPlugin,
-  type RenderBlockProps,
 } from "@yoopta/editor";
-import { FloatingToolbar } from "@yoopta/ui";
-import { BlockDndContext, SortableBlock } from "@yoopta/ui/block-dnd";
+import Image from "@yoopta/image";
+import { Bold, CodeMark, Italic, Strike, Underline } from "@yoopta/marks";
 import { applyTheme } from "@yoopta/themes-shadcn";
+import { BlockDndContext, SortableBlock } from "@yoopta/ui/block-dnd";
+import { FloatingToolbar } from "@yoopta/ui";
+import Blockquote from "@yoopta/blockquote";
+import Callout from "@yoopta/callout";
+import Code from "@yoopta/code";
+import Divider from "@yoopta/divider";
+import Headings from "@yoopta/headings";
+import Link from "@yoopta/link";
+import Lists from "@yoopta/lists";
+import Paragraph from "@yoopta/paragraph";
+import Table from "@yoopta/table";
+
+import { MermaidPlugin } from "./plugins/mermaid";
 import { YooptaFloatingBlockActions } from "./yoo-components/floating-block-actions";
 import { YooptaSlashCommandMenu } from "./yoo-components/yoopta-slash-command-menu";
-
-import Paragraph from "@yoopta/paragraph";
-import Headings from "@yoopta/headings";
-import Blockquote from "@yoopta/blockquote";
-import Lists from "@yoopta/lists";
-import Code from "@yoopta/code";
-import Image from "@yoopta/image";
-import Table from "@yoopta/table";
-import Callout from "@yoopta/callout";
-import Divider from "@yoopta/divider";
-import Link from "@yoopta/link";
-
-import { Bold, CodeMark, Italic, Strike, Underline } from "@yoopta/marks";
 
 function createLocalImageUploadResult(file: File) {
   return {
@@ -76,26 +76,25 @@ export function YooptaDocEditor({
       Code.CodeGroup,
     ] as unknown as AnyPlugin[];
 
-    const YImage = Image.extend({
+    const imagePlugin = Image.extend({
       options: {
         upload: async (file) => createLocalImageUploadResult(file),
       },
     }) as unknown as AnyPlugin;
 
-    const themed = applyTheme([
+    return applyTheme([
       Paragraph,
       ...headingPlugins,
       ...listPlugins,
       Blockquote,
       ...codePlugins,
-      YImage,
+      imagePlugin,
       Table,
       Callout,
       Divider,
       Link,
+      MermaidPlugin,
     ]);
-
-    return themed;
   }, []);
 
   const marks = useMemo(() => [Bold, Italic, Underline, Strike, CodeMark], []);
@@ -119,8 +118,8 @@ export function YooptaDocEditor({
           } else {
             editor.focus();
           }
-        } catch (e) {
-          console.error("[YooptaEditor] Initialization error:", e);
+        } catch (error) {
+          console.error("[YooptaEditor] Initialization error:", error);
         }
       }, 200);
       return () => clearTimeout(timer);
@@ -128,15 +127,15 @@ export function YooptaDocEditor({
   }, [editor]);
 
   useEffect(() => {
-    if (editor) {
-      editor.setEditorValue((value ?? {}) as YooptaContentValue);
-      setTimeout(() => {
-        if (editor.isEmpty()) {
-          editor.insertBlock("Paragraph", { focus: true });
-        }
-      }, 100);
-    }
-  }, [id, editor]); // Removed value from dependencies to prevent resetting editor on every change
+    editor.setEditorValue((value ?? {}) as YooptaContentValue);
+    const timer = setTimeout(() => {
+      if (editor.isEmpty()) {
+        editor.insertBlock("Paragraph", { focus: true });
+      }
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, [editor, id]);
 
   const handleChange = useCallback(
     (next: YooptaContentValue) => {
@@ -147,7 +146,7 @@ export function YooptaDocEditor({
     [editor, onChange],
   );
 
-  const renderBlock = useCallback(({ children, blockId }: RenderBlockProps) => {
+  const renderBlock = useCallback(({ blockId, children }: RenderBlockProps) => {
     return (
       <SortableBlock id={blockId} useDragHandle>
         {children}
@@ -156,7 +155,7 @@ export function YooptaDocEditor({
   }, []);
 
   return (
-    <div className="w-full max-w-4xl mx-auto" style={{ paddingBottom: 100 }}>
+    <div className="mx-auto w-full max-w-4xl" style={{ paddingBottom: 100 }}>
       <BlockDndContext editor={editor}>
         <YooptaEditor
           editor={editor}

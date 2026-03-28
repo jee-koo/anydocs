@@ -8,12 +8,12 @@
   "status": "published",
   "updatedAt": "2026-03-19T00:00:00.000Z",
   "content": {
-    "5f0327a6": {
-      "id": "5f0327a6",
+    "71fcade7": {
+      "id": "71fcade7",
       "type": "HeadingOne",
       "value": [
         {
-          "id": "1ffa3272",
+          "id": "a55cce35",
           "type": "heading-one",
           "children": [
             {
@@ -27,12 +27,12 @@
         "depth": 0
       }
     },
-    "86ae12cb": {
-      "id": "86ae12cb",
+    "d7db2222": {
+      "id": "d7db2222",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "00fec0c4",
+          "id": "b047e76d",
           "type": "heading-two",
           "children": [
             {
@@ -46,597 +46,837 @@
         "depth": 0
       }
     },
-    "a5004436": {
-      "id": "a5004436",
+    "4a1f4c6b": {
+      "id": "4a1f4c6b",
       "type": "Table",
       "value": [
         {
-          "id": "ea7b58b6",
-          "type": "table-row",
+          "id": "84bc63c2",
+          "type": "table",
           "children": [
             {
-              "id": "298eb5f3",
-              "type": "table-data-cell",
+              "id": "20698a47",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "网络"
+                  "id": "7b1386eb",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "网络"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "63c07884",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "原生代币"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "483e381e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "chain_id"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "2ec11d36",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "主要代币"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": true,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "c3049f9f",
-              "type": "table-data-cell",
+              "id": "fae64004",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "原生代币"
+                  "id": "c4006506",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Ethereum"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "37c9a280",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "ETH"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "6dbbdeb4",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "60"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "320167f5",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "USDT, USDC, DAI, LINK 等"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "06887e3d",
-              "type": "table-data-cell",
+              "id": "7cb8ab65",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "chain_id"
+                  "id": "049ea73a",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "TRON"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "16ea7fb0",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "TRX"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "4cde8278",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "195"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "0e58ef4b",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "USDT, USDC"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             },
             {
-              "id": "7ccfdd9c",
-              "type": "table-data-cell",
+              "id": "d8b3d69b",
+              "type": "table-row",
               "children": [
                 {
-                  "text": "主要代币"
+                  "id": "9e1dbf82",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Solana"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "97c49623",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "SOL"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "9f1465c9",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "1000"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "61bb33fa",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "USDT, USDC, USD1"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "9ec5d018",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "3ea9e0a3",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "BNB Smart Chain"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "5985a9a2",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "BNB"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "5e48681f",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "2510"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "945ef880",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "USDT, USDC, USD1 等"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "bc9b0b1d",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "3e9efa27",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Polygon"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "6f91b5d2",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "POL"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "629c35a8",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "62"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "b6e9b208",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "USDT, USDC, DAI"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "a6e06a3d",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "41f9e1b1",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Base"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "99f776af",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "ETH"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "c63fef17",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "66"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "e08facc1",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "USDC, USDT, EURC"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "4b315b87",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "f908270e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Arbitrum One"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "df2a909c",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "ARB"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "25b06e28",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "63"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "c19ba864",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "USDT, USDC"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "b6681a52",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "ba1702db",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Avalanche-C"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "d0d7c610",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "AVAX"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "0f56a2e0",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "65"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "9316300b",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "USDT, USDC"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "0e5f59b9",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "53bdb60a",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "TON"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "04667c8d",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "TON"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "e22b549a",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "2000"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "d1740c97",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "USDT"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "ffbdb762",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "8b0aa3f5",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Aptos"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "e0c12641",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "APT"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "b0fa3e8a",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "3100"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "c56bbcc0",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "—"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "4fe8fb49",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "a65fc3ad",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "SUI"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "821cb14b",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "SUI"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "f4cd35ac",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "3000"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "7880f4a4",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "CETUS, WAL 等"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "135f7aba",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "f1bb402e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Optimism"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "01b61da3",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "OP"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "3266ad4e",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "64"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "e3c207ef",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "USDT, USDC"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                }
+              ]
+            },
+            {
+              "id": "e8380efc",
+              "type": "table-row",
+              "children": [
+                {
+                  "id": "78fe5156",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "Ripple"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "96514fa3",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "XRP"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "15c51096",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "144"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
+                },
+                {
+                  "id": "94822067",
+                  "type": "table-data-cell",
+                  "children": [
+                    {
+                      "text": "—"
+                    }
+                  ],
+                  "props": {
+                    "asHeader": false,
+                    "width": 200
+                  }
                 }
               ]
             }
-          ]
-        },
-        {
-          "id": "98311b05",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "7e3d2ad4",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Ethereum"
-                }
-              ]
-            },
-            {
-              "id": "f0204f61",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "ETH"
-                }
-              ]
-            },
-            {
-              "id": "f415abf4",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "60"
-                }
-              ]
-            },
-            {
-              "id": "041cf5cc",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "USDT, USDC, DAI, LINK 等"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "54c09c33",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "edb3fbb7",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "TRON"
-                }
-              ]
-            },
-            {
-              "id": "d3595912",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "TRX"
-                }
-              ]
-            },
-            {
-              "id": "a2ca4448",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "195"
-                }
-              ]
-            },
-            {
-              "id": "e5d8d378",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "USDT, USDC"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "cd147a5c",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "69655593",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Solana"
-                }
-              ]
-            },
-            {
-              "id": "efc0e1e7",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "SOL"
-                }
-              ]
-            },
-            {
-              "id": "489081f2",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "1000"
-                }
-              ]
-            },
-            {
-              "id": "90668d87",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "USDT, USDC, USD1"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "18cb3a5d",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "4808ea6c",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "BNB Smart Chain"
-                }
-              ]
-            },
-            {
-              "id": "8aee3eea",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "BNB"
-                }
-              ]
-            },
-            {
-              "id": "9a3dbb5f",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "2510"
-                }
-              ]
-            },
-            {
-              "id": "c669588a",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "USDT, USDC, USD1 等"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "a5ee58ee",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "fb59fb66",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Polygon"
-                }
-              ]
-            },
-            {
-              "id": "90dd2e24",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "POL"
-                }
-              ]
-            },
-            {
-              "id": "41a4f20c",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "62"
-                }
-              ]
-            },
-            {
-              "id": "b1754135",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "USDT, USDC, DAI"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "066910db",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "4f83b851",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Base"
-                }
-              ]
-            },
-            {
-              "id": "62396dba",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "ETH"
-                }
-              ]
-            },
-            {
-              "id": "3190cdbc",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "66"
-                }
-              ]
-            },
-            {
-              "id": "3bfca70c",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "USDC, USDT, EURC"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "ded77ac4",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "fa51b91e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Arbitrum One"
-                }
-              ]
-            },
-            {
-              "id": "70b51416",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "ARB"
-                }
-              ]
-            },
-            {
-              "id": "4c86cc21",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "63"
-                }
-              ]
-            },
-            {
-              "id": "71959419",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "USDT, USDC"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "696ed7a3",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "8f63ccf4",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Avalanche-C"
-                }
-              ]
-            },
-            {
-              "id": "652fea48",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "AVAX"
-                }
-              ]
-            },
-            {
-              "id": "9f8c3a94",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "65"
-                }
-              ]
-            },
-            {
-              "id": "6a10b6a7",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "USDT, USDC"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "57cf6c2b",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "85a62e60",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "TON"
-                }
-              ]
-            },
-            {
-              "id": "44daaf3e",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "TON"
-                }
-              ]
-            },
-            {
-              "id": "d0ceac53",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "2000"
-                }
-              ]
-            },
-            {
-              "id": "9479889f",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "USDT"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "9eaca680",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "5749d96c",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Aptos"
-                }
-              ]
-            },
-            {
-              "id": "58384aae",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "APT"
-                }
-              ]
-            },
-            {
-              "id": "53e922b8",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "3100"
-                }
-              ]
-            },
-            {
-              "id": "5bcb703d",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "—"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "13c3dc15",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "0895334f",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "SUI"
-                }
-              ]
-            },
-            {
-              "id": "5f0c7682",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "SUI"
-                }
-              ]
-            },
-            {
-              "id": "576ddee8",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "3000"
-                }
-              ]
-            },
-            {
-              "id": "d0079ec5",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "CETUS, WAL 等"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "ce8bba3a",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "6ed55f8f",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Optimism"
-                }
-              ]
-            },
-            {
-              "id": "8ed05490",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "OP"
-                }
-              ]
-            },
-            {
-              "id": "0c239d92",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "64"
-                }
-              ]
-            },
-            {
-              "id": "382a8475",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "USDT, USDC"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "6a57d2d1",
-          "type": "table-row",
-          "children": [
-            {
-              "id": "a5b9a43c",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "Ripple"
-                }
-              ]
-            },
-            {
-              "id": "a44a4feb",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "XRP"
-                }
-              ]
-            },
-            {
-              "id": "a924a200",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "144"
-                }
-              ]
-            },
-            {
-              "id": "53c1a2a4",
-              "type": "table-data-cell",
-              "children": [
-                {
-                  "text": "—"
-                }
-              ]
-            }
-          ]
+          ],
+          "props": {
+            "headerRow": true,
+            "headerColumn": false,
+            "columnWidths": [
+              200,
+              200,
+              200,
+              200
+            ]
+          }
         }
       ],
       "meta": {
@@ -644,12 +884,12 @@
         "depth": 0
       }
     },
-    "36242e0e": {
-      "id": "36242e0e",
+    "e1ae5450": {
+      "id": "e1ae5450",
       "type": "Paragraph",
       "value": [
         {
-          "id": "5aca7fee",
+          "id": "a7e8248e",
           "type": "paragraph",
           "children": [
             {
@@ -663,12 +903,12 @@
         "depth": 0
       }
     },
-    "668b3592": {
-      "id": "668b3592",
+    "1cdf4e0f": {
+      "id": "1cdf4e0f",
       "type": "HeadingTwo",
       "value": [
         {
-          "id": "cde7b5af",
+          "id": "38e4ba7b",
           "type": "heading-two",
           "children": [
             {
@@ -682,12 +922,12 @@
         "depth": 0
       }
     },
-    "f5a4a7bf": {
-      "id": "f5a4a7bf",
+    "a5f0067d": {
+      "id": "a5f0067d",
       "type": "Paragraph",
       "value": [
         {
-          "id": "9abcdef3",
+          "id": "4cb222e5",
           "type": "paragraph",
           "children": [
             {
