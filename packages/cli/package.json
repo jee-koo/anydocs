@@ -22,7 +22,7 @@
     "prepublishOnly": "pnpm build",
     "test": "node --experimental-strip-types --test --test-concurrency=1 tests/**/*.test.ts",
     "test:package": "node --experimental-strip-types --test --test-concurrency=1 tests/package-artifact.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit -p tsconfig.typecheck.json"
   },
   "dependencies": {
     "@anydocs/core": "workspace:*",
