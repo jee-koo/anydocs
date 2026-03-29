@@ -144,7 +144,7 @@ test('cli prints command-specific help and version', async () => {
 
   assert.equal(versionResult.exitCode, 0);
   assert.equal(versionResult.signal, null);
-  assert.equal(versionSpawned.getStdout().trim(), '1.0.5');
+  assert.equal(versionSpawned.getStdout().trim(), '1.0.7');
   assert.equal(versionSpawned.getStderr(), '');
 });
 
@@ -158,7 +158,7 @@ test('version supports structured json output', async () => {
   assert.deepEqual(JSON.parse(spawned.getStdout()), {
     ok: true,
     data: {
-      version: '1.0.5',
+      version: '1.0.7',
     },
     meta: {
       command: 'version',
