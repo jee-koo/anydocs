@@ -26,7 +26,7 @@ env:
 jobs:
   quality:
 
-    if: ${{ github.event.workflow_run.conclusion != 'success' }}
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     
     name: Quality
     runs-on: ubuntu-latest
