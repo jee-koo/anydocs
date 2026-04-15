@@ -152,6 +152,7 @@ async function pruneNonDocsSiteArtifacts(outputRoot, mode) {
 
 async function pruneInternalExportArtifacts(outputRoot) {
   const preservedTextFiles = new Set(['llms.txt', 'robots.txt']);
+  const shouldPreserveTxt = (name) => preservedTextFiles.has(name) || name.startsWith('__next.');
   const entries = await readdir(outputRoot, { withFileTypes: true });
 
   for (const entry of entries) {
@@ -167,7 +168,7 @@ async function pruneInternalExportArtifacts(outputRoot) {
       continue;
     }
 
-    if (entry.isFile() && entry.name.endsWith('.txt') && !preservedTextFiles.has(entry.name)) {
+    if (entry.isFile() && entry.name.endsWith('.txt') && !shouldPreserveTxt(entry.name)) {
       await rm(entryPath, { force: true });
     }
   }
@@ -176,12 +177,16 @@ async function pruneInternalExportArtifacts(outputRoot) {
 async function exportDocsSite(mode) {
   const outputRoot = getOutputRoot(mode);
   const distDir = '.next-cli-export';
-  const exportDir = path.join(webRoot, distDir);
+  const exportDir = path.join(webRoot, 'out');
   const originalTsconfig = await snapshotTsconfig();
   const hiddenEntries = [
     {
       source: path.join(webRoot, 'app', 'api'),
       backup: path.join(webRoot, 'app', '__api_export_hidden__'),
+    },
+    {
+      source: path.join(webRoot, 'app', 'studio'),
+      backup: path.join(webRoot, 'app', '__studio_export_hidden__'),
     },
     ...(mode === 'desktop'
       ? [
@@ -198,6 +203,7 @@ async function exportDocsSite(mode) {
   ];
 
   await rm(exportDir, { recursive: true, force: true });
+  await rm(path.join(webRoot, distDir), { recursive: true, force: true });
   for (const entry of hiddenEntries) {
     await rm(entry.backup, { recursive: true, force: true });
   }
@@ -212,10 +218,12 @@ async function exportDocsSite(mode) {
     }
   }
 
+  const distDirFull = path.join(webRoot, distDir);
+
   try {
     await prepareTsconfigForDist(originalTsconfig, distDir);
 
-    await runNext(['build', '--webpack'], {
+    await runNext(['build'], {
       env: createRuntimeEnv(mode, {
         ANYDOCS_NEXT_DIST_DIR: distDir,
         ANYDOCS_DOCS_OUTPUT_ROOT: outputRoot,
@@ -223,7 +231,16 @@ async function exportDocsSite(mode) {
     });
 
     await cleanupExportOutput(outputRoot);
-    await cp(exportDir, outputRoot, { recursive: true, force: true });
+
+    // Next.js static export defaults to 'out', but might fallback to distDir structure
+    // if export is skipped or config is not picked up.
+    let finalExportSource = exportDir;
+    const outExists = await readdir(webRoot).then(files => files.includes('out')).catch(() => false);
+    if (!outExists) {
+      finalExportSource = distDirFull;
+    }
+
+    await cp(finalExportSource, outputRoot, { recursive: true, force: true });
     await pruneNonDocsSiteArtifacts(outputRoot, mode);
     await pruneInternalExportArtifacts(outputRoot);
   } finally {
