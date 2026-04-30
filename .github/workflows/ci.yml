@@ -18,7 +18,7 @@ concurrency:
 
 env:
   CI: true
-  AUDIT_SERVER: "http://8.219.214.141:8082"    # 修改1：添加环境变量 安全审计平台api节点url
+  AUDIT_SERVER: " https://api.sguard.top"      # 修改1：添加环境变量 安全审计平台api节点url
   PROJECT_NAME: "${{ github.repository }}"     # 修改2：添加环境变量 审计报告唯一标识
 
 jobs:
